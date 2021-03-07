@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="abc" class="abc bc cd">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+
+  <div class="ab" style="background-color: green;"></div><br><br>
+
+  <div class="abcd" style="background-color: red;"></div>
+
+  <button id="btn">click</button>
+
+<br><br>
+  <form id="form1">
+  	<input type="text" placeholder="name" id="name">
+  	
+  	<input type="password" placeholder="password" id="pswrd">
+  	<input type="submit" value="submit" id="sub">
+  </form>
+
+  <div class="formfull"></div>
+	<script>
+
+		/*
+		get methods is used to get html DOM value
+
+		1) text()
+		2) html()
+		3) attr()    => attributes(property:value)
+		4) val()     => special for form, get value from form i.e input box,radio button,select box
+
+
+		*/
+		$(document).ready(function() {
+            $("#btn").click(function () {
+              var a= $(".abc p").html();  //html() gives tags along with text,if try in consol
+            $(".ab").html(a);	
+            })
+            
+
+			var a = $(".abc").text();    //text() gives only text of that tags,not its full html
+            $(".abcd").text(a);
+
+            var a = $("#abc").attr("class");    
+             console.log(a);
+
+             $("#form1").submit(function () {  //val() is only used with forms
+             	var a=$("#name").val();
+                var b=$("#pswrd").val();
+
+              alert(a + b)
+
+             });     
+             
+		});
+	</script>
+</body>
+</html>

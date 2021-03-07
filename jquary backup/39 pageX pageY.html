@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	
+	</div>
+	<div class="ab" style="width: 100px;height: 100px;background-color: red;"></div>
+
+	<button>click me</button>
+
+	<script>
+		/*
+		1) event.pageX  => to find mouse location
+		2) event.pageY   =>same as above
+		3) event.type
+		4) event.which
+		5) event.target
+		6) event.preventDefault()
+		7) event.isDefaultPrevented()
+		8) event.stopPropagation()
+		9) event.isPropagationStopped()
+		10) event.data
+
+
+		to use these events ,in function event parameter muust b given
+
+		*/
+
+		$(document).ready(function() {
+			$(document).mousemove(function (event) {
+				$(".abc").text("x-axis:"+event.pageX + "   yaxis:" +event.pageY);
+			});
+			$(document).mousemove(function (event) {
+				$(".abc").text(event.pageX + event.pageY);
+
+				var x=event.pageX
+				var y=event.pageY
+
+				$(".ab").offset({top:y,left:x});
+			});
+		});
+	</script>
+</body>
+</html>

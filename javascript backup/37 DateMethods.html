@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+//Date method, for date method it require a date method object which is var now=new Date(); ,thereare 16 dates methods
+
+var a=new Date();
+document.write(a);
+
+document.write("<br>");
+
+//now starts its methods
+
+//toDateString()
+var a=new Date();
+document.write(a.toDateString());
+document.write("<br>");
+
+
+//getDate
+var a=new Date();
+document.write(a.getDate());
+document.write("<br>");
+
+//getFullYear()
+var a=new Date();
+document.write(a.getFullYear());
+document.write("<br>");
+
+
+//GetMonth() ,in javascript month show as (0,1,2,3,4 etc)('0'jan,'1'feb,'2'mar etc)
+var a=new Date();
+document.write(a.getMonth());
+document.write("<br>");
+
+//getDay(), in js day show as(0,1,2,3 etc)'0'sun,'1'Mon,'2'Tue etc
+var a=new Date();  
+document.write(a.getDay());  //'0'sun,'1'Mon,'2'Tue etc
+document.write("<br>");
+
+
+//if give any date then, then it show detail of that date or if give any command it will show detail of that date
+var a=new Date("feb 5 2020");
+document.write(a.toDateString());
+document.write("<br>");
+
+var a=new Date("feb 20 2010");
+document.write(a.getMonth());
+document.write("<br>");
+
+var a=new Date("feb 20 2010");
+document.write(a.getFullYear());
+document.write("<br>");
+
+
+
+
+//Now Time related function
+
+//getHours()
+var a=new Date();
+document.write(a.getHours());
+document.write("<br>");
+
+
+//getMinutes()
+var a=new Date();
+document.write(a.getMinutes());
+document.write("<br>");
+
+//getSeconds(),
+var a=new Date();
+document.write(a.getSeconds());
+document.write("<br>");
+
+//getMilliSeconds()
+var a=new Date();
+document.write(a.getMilliseconds());
+document.write("<br>");
+
+
+
+//NOW start set methods,It provide future date,time etc details
+var a=new Date();
+a.setDate(20)
+
+document.write(a);
+document.write("<br>");
+
+
+
+
+var a=new Date();
+a.setFullYear(2022);
+
+document.write(a);
+document.write("<br>");
+
+
+
+
+var a=new Date();
+a.setHours(14);
+
+document.write(a);
+document.write("<br>");
+
+
+
+//in normal life how we get actuall present time. it cannt get correct date,bc it behaves like an array and start its index no. from 0. '0'jan '1'feb etc
+var a=new Date();
+
+document.write(a.getDate()+"/"+a.getMonth()+"/"+a.getFullYear());
+document.write("<br>");
+
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

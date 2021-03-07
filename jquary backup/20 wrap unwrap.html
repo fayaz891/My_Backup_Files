@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button class="wrap">wrap</button>
+	<button class="unwrap">unwrap</button>
+
+	<div class="abcd" style="background-color: yellow;">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<script>
+		/*
+
+		wrap()    =>put a tag into other parentTag we use wrap(),new tag will parent tag,
+		each tag will put in each parent tag
+		
+		Unwrap()   =>remove  parent tag from child-tag we use unwrap()
+
+		*/
+
+		$(document).ready(function() {
+			$(".wrap").click(function () {
+			$(".abc").wrap("<div style='background:green;'>fayaz is the great</div>");
+
+			//div tag will become parent and abc tg will child
+
+			});
+
+			$(".unwrap").click(function () {
+			$(".abcd p").unwrap();   //no value/parameter required
+
+		});
+
+
+			
+		});
+	</script>
+</body>
+</html>

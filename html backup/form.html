@@ -1,0 +1,147 @@
+ <html>
+<head><title> form tag</title>
+</head>
+
+<body>
+
+	<h1>type attributes</h1>
+	button
+	checkbox
+	color
+	date
+	datetime
+	datetime-local
+	email
+	file
+	hidden
+	image
+	month
+	number
+	password
+	radio
+	range
+	reset
+	search
+	submit
+	tel
+	text
+	time
+	url
+	week
+
+<h2>name attribute</h2>
+it connect with database connection,serverside know it with name attributes
+i.e
+registrationform
+fname
+lname
+
+<h2>value attribute</h2>
+initial value
+
+<form action="url" method="GET" method="POST">
+<fieldset>
+ 
+
+
+<lable>Name</lable>
+                  <input type="text" name="" value="" placeholder="">
+              
+                  <br/>
+
+<lable>Password</lable>
+                  <input type="password" placeholder="password" >    <br/>
+
+<lable>Email</lable> 
+                  <input type="email" placeholder="email"><br/>
+
+<lable>Gender</lable>
+                  <input type="radio" value="male" name="gender">Male 
+                  <input type="radio" value="female" name="gender">FeMale<br/>
+
+<lable> Hobbeis </lable>
+                <input type="checkbox" value="Cricket">Cricket
+                <input type="checkbox" value="hearing songs">hearing songs
+                <input type="checkbox" value="reading books">Reading books    <br/>
+
+<lable>Comment</lable>
+                <input texrarea rows="5" cols="32">    <br/>
+
+<lable>Country</lable>
+ <select>
+      <option>Pakistan</option>
+      <option>India</option>
+      <option>Australia</option>
+</select>
+
+ 
+</fieldset>
+</form>
+
+
+
+
+<form action="form_submit" method="get" accept-charset="utf-8" name="registrationform">
+
+	<label>First Name<input type="text" name="fname" value="first name"></label><br>
+	<label>Last Name<input type="text" name="lname" value="last name"></label><br>
+
+	<label>password<input type="password" name="" value="password"></label><br>
+	<label>email<input type="email" name="email" value=""></label><br>
+
+    <label>location:
+    	peshawar<input type="checkbox" name="location" value="" checked="checked">
+    	islamabad<input type="checkbox" name="location" value="">
+    </label><br>
+
+    <label>gender:
+    	male<input type="radio" name="status" checked="checked">
+    	female<input type="radio" name="status">
+    </label><br>
+
+
+    <label>your website name<input type="url"></label><br>
+
+    <label>search<input type="search"></label><br>
+
+    <label>tel no<input type="tel" name="phone"></label><br>
+    
+    <label>range<input type="range" name="range" ></label><br>
+
+    <label>select age<input type="number" value="18"></label><br>
+
+    <label>select file<input type="file"></label><br>
+
+    <label>image button <input type="image" src="image.jpg" alt="submit"></label><br>
+
+    <label>country<input type="hidden" name="country" value="pakistan"></label><br>
+
+    <label>date<input type="date"></label><br>
+
+    <label>time<input type="time"></label><br>
+
+    <label>date and time<input type="datetime"></label><br>
+
+    <label>datetime local<input type="datetime-local"></label><br>
+
+    <label>month<input type="month"></label><br>
+
+    <label>week and year<input type="week"></label><br>
+
+    <label>submit<input type="submit" name="submit" value="click here"></label><br>
+
+    <label>reset<input type="reset" value="reset"></label><br>
+
+    <label>color select<input type="color"></label><br>
+
+
+    
+
+    <label>click<input type="button" value="login"></label>
+
+</form>
+
+
+</body>
+
+</html>

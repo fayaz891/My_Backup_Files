@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pseudo-classes</title>
+	<style>
+     
+    :root{maincolor:"blue"}
+    #computer{color:var(maincolor);}
+
+     .ul a:link{color: orange;}
+     .ul a:hover{color: green;}
+     .ul a:visited{color: red;}
+     .ul a:active{color: red;}
+
+	 p:target{background-color: gold;}
+
+
+     input:focus{border: 3px solid red;}
+
+     input[type="checkbox"]:checked{box-shadow: 0 0 0 3px red;}
+
+     input[type="radio"]:checked{box-shadow: 0 0 0 3px red;}
+
+     input[type="text"]:enabled{border: 2px solid blue;}
+
+
+     input:required{background:lime;}
+
+     input:optional{background:wheat;}
+
+     input:in-range{background:yellow;}
+
+     input:out-of-range{background:red;}
+
+     input:read-only{background:green;}
+
+     input:read-write{background:pink;}
+
+     input:invalid{background:yellow;}
+
+     input:valid[type="email"]{background:green;}
+
+     input:default{border: 1px solid red;}
+
+
+	</style>
+</head>
+<body>
+
+<ul class="ul">
+	<li><a href="#1">home</a></li>
+	<li><a href="#2">gallery</a></li>
+	<li><a href="#3">about us</a></li>	
+</ul>
+
+<a href="#computer">what is computer</a><br>
+<a href="#html">what is html</a><br>
+<a href="#css">what is css</a>
+
+<p id="computer">computer is a man made machine which worked hrs work in a second and are very fast in calculation</p>
+
+<p id="html">hyper text markup language</p>
+
+<p id="css">computer is a man made machine which worked hrs work in a second and are very fast in calculation</p>
+
+<br><br><br>
+
+
+<form>
+	name:<input type="text"><br>
+	L.name:<input type="text" value="fayaz" readonly><br>
+
+	age: <input type="number" min="10" max="20"><br>
+
+	email:<input type="email" required><br>
+
+	hobbies:
+	sports<input type="checkbox">
+	reading<input type="checkbox" checked>
+	music<input type="checkbox"><br>
+
+	gender:
+	male<input type="radio" name="abc">
+	female<input type="radio" name="abc"><br>
+
+	country:<select optional>
+		<option selected>pakistan</option>
+		<option>india</option>
+		<option>bangladish</option>
+		option
+	</select><br>
+
+	submit: <input type="submit">
+</form>
+
+
+
+
+
+</body>
+</html>

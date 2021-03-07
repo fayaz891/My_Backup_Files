@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.abc{width: 300px;
+			height: 200px;
+			padding:10px;
+			border:5px solid green;
+			margin:10%;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog the quick fox jump over the lazy dog the quick fox jump over the lazy dog the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button class="width">width</button>
+	<button class="height">height</button>
+
+	<script>
+
+		/*
+		1) width()    =>content width only
+		2) height()   =>content height only
+		3) innerWidth()  =>div width (content + padding)
+		4) innerHeight()  =>div height (.....)
+		5) outerWidth()   =>upto outerborder (content + padding + border width)
+		6) outerHeight()  =>upto outer border (content + paddig + border height)
+		7) outerWidth(true)  =>upto outer margin (content + padding + border width + Margin)
+		8) outerHeight(true)  =>upto outer margin (content + padding + border height + Margin)
+
+		*/
+
+		$(document).ready(function() {
+			$(".width").click(function () {
+            
+            //we can set values of width and height
+				$(".abc").width("400px");
+				
+
+            //we can get value of width and height
+				console.clear();
+
+		     var a=$(".abc").width();
+		     console.log("width = "+a);
+
+		     var a=$(".abc").innerWidth();
+		     console.log("innerwidth = "+a);
+
+		     var a=$(".abc").outerWidth();
+		     console.log("outerwidth = "+a);
+
+		     var a=$(".abc").outerWidth(true);
+		     console.log("outerwidthtrue = "+a);
+
+			});
+
+
+
+			$(".height").click(function () {
+				//set height
+				$(".abc").height("300px");
+		     //get height value
+		     console.log("height = " + $(".abc").height());
+		     console.log("innerHeight = " + $(".abc").innerHeight());
+		     console.log("outerHeight = " + $(".abc").outerHeight());
+		     console.log("outerHeight = " + $(".abc").outerHeight(true));
+		     
+			});
+		});
+	</script>
+</body>
+</html>

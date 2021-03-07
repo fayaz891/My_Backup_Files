@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+
+		.ab{width: 400px;
+		    height: 200px;
+		    background-color: yellow;}    
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+	<ul>
+		<li>orange</li>
+		<li>yellow</li>
+		<li>green</li>
+		<li>blue</li>
+		<li>yellow</li>
+		<li>green</li>
+		<li>blue</li>
+	</ul>
+
+	<div class="ab">
+		<h2>fayaz</h2>
+		<p class="test">the quick fox jump over the lazy dog</p>
+
+		<p>the quick fox jump over the lazy dog</p>
+
+	</div>
+     <p>the quick fox jump over the lazy dog</p>
+	<button class="first">first</button>
+	<button class="last">last</button>
+	<button class="eq">eq (equation)</button>
+	<button class="filter">filter</button>
+	<button class="wfilter">without filter</button>
+	<button class="not">not</button>
+	<button class="slice">slice from 2</button>
+	<button class="slice1">slice 2 - 6</button>
+
+	<script>
+
+		/*
+		4) filtering methods
+
+		a) first()
+		b) last()
+		c) eq()  =>target by thier number in eq() parameters
+		d) filter()  => to filt a tag by id,class etc
+		e) not()   => target all except,not() is used for except
+		f) slice()
+
+		*/
+
+		$(document).ready(function() {
+			$(".first").click(function () {
+				$("p").first().css("background","gold");
+			});
+
+			$(".last").click(function () {
+				$("p").last().css("background","gold");
+			});
+
+			$(".eq").click(function () {
+				$("ul li").eq(2).css("background","gold");
+				//eq(-1),eq(-2),eq(0),eq(1) etc
+			});
+
+			$(".filter").click(function () {
+				$("p").filter(".test").css("background","gold");
+			});
+			$(".wfilter").click(function () {
+				$("p.test").css("background","gold");
+			});
+
+			$(".not").click(function () {
+				$("p").not(".test").css("background","gold");
+			});
+
+			$(".slice").click(function () {
+				$("ul li").slice(2).css("background","gold");
+			});
+
+			$(".slice1").click(function () {
+				$("ul li").slice(2,6).css("background","gold");
+			});
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+  //object, it is worked like an array and it is advace level of an array
+
+  //in array value store in the form of index no. while in object it is also stored in the form index no. but every index nmbr has there own properties and values ,although array dont have these things
+
+  //each index no. has properties and values
+  //in object we also stored an array
+  //also stored multiple functions which is called methods
+
+
+ var a={ fname:"fayaz",
+         last_name:"rashid",
+         age:25,
+         email:"hello23@gmail.com"}
+
+document.write(a.fname);
+document.write("<br>");
+
+document.write(a.fname+"<br>"+a.last_name+"<br>"+a.age+"<br>"+a.email+"<br>");
+
+
+//if we add one more property then
+a.address="pakistan";
+document.write(a.address);
+
+//if we delete one property then 
+delete a.fname;
+
+
+//other method
+var fee={}
+fee["adnan"]=100;
+fee["fayaz_rashid"]=150;  //2 words property must in []
+fee.zafar=200;
+fee.sufyan=300;
+fee["total"]=function() {
+	return (100+150+200+300);
+}
+
+document.write(fee["adnan"]);
+document.write(fee["fayaz_rashid"]);
+
+document.write(fee.total());
+
+
+var fee={}  //lateral object
+var fee=new Object() //constructor object
+
+
+
+
+//add array in object
+var a={
+        fayaz_friends:["Majid","farooq","abdulwahid"],
+        fayaz:["hamad","zafar","mahan"]
+        }
+   document.write(a.fayaz_friends);
+    document.write("<br>");
+   document.write(a.fayaz);
+   document.write("<br>");
+          //we also called it with there index no.
+   document.write(a.fayaz_friends[2]);
+   document.write("<br>");
+   document.write(a.fayaz_friends[0]);
+   
+   document.write("<br><br><br>");
+
+
+
+ //add object in array(array of object)
+ var a=[
+         
+         {name:"fayaz", age:25, education:"BS"},
+         {name:"hamad", age:22, education:"Fsc"},
+
+        ]  
+     for (var i = 0; i < a.length; i++) {
+
+     	document.write(a[i].name);
+     	document.write(a[i].age);
+     	document.write(a[i].education);
+
+     	document.write("<br>"+a[i].name+"<br>"+a[i].age+"<br>"+a[i].education);
+     }
+     document.write("<br><br><br>");
+
+
+  //add function, object member that are function called method
+  var a={
+         salary:function () {
+         	return 25000;
+          }
+        }
+document.write(a.salary());
+document.write("<br>");
+
+
+
+
+var a={ fname:"fayaz",
+        lname:"rashid",
+
+     fullname: function () {
+
+      return this.fname+this.lname; //'this' must used to call fname bc it call this (a) object
+       }
+     }
+ document.write(a.fullname());
+
+
+ //one object contain other object
+ var a={
+          living:{
+        	    city:"peshawar",
+        	    country:"pakistan", //end dont give (;) but (,)
+                 }  //if add other properties then use (,) after inner object
+        }
+document.write(a.living.city);
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

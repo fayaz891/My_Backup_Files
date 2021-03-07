@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	<p>the quick fox jump over the lazy dog</p>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button>click me</button>
+
+	<div class="rep">
+		<p>the quick fox jump over the lazy dog</p>
+	<p>the quick fox jump over the lazy dog</p>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<script>
+
+		/*
+		replaceWith()   => we replace any tag with other tags
+		replaceAll()    => it is same as replacewith() but in replace we can replace only tags while in replacewith we can replace tags as well as text nodes, the other difference is writting method
+		i.e  $("content").replaceAll("selector")
+
+		*/
+
+		$(document).ready(function() {
+			$("button").click(function () {
+				$(".abc h2").replaceWith("<h1>Fayaz is the great</h1>")
+			});
+
+			$("button").click(function () {
+				$(".abc p:nth-child(3)").replaceWith("fayz is the great")
+			});
+
+			$("button").click(function () {
+				$("<h2>fayaz is the great</h2>").replaceAll(".rep p:nth-child(2)");
+			});
+		});
+	</script>
+</body>
+</html>

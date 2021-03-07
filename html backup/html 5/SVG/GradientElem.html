@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+.container{background-color:gray;
+            width:300px;
+            height:250px;
+            border:1px;
+	    margin:auto;}
+.rectangle{fill:url(#geffect);}		
+</style>
+</head>
+
+
+<body>
+
+
+<div class="container">
+<svg viewbox="0,0,100,100">
+
+<defs>
+<linearGradientradient id="geffect">
+<stop offset="0%" stop-color="yellowgreen" />
+<stop offset="80%" stop-color="orange" />
+</linearGradient>
+</defs>
+
+<rect class="rectangle" x="10" y="20" height="50" width="80" stroke="blue">
+</rect>
+
+</svg>
+</div>
+</body>
+</html>

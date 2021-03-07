@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+
+		
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2><b>fayaz</b></h2>
+	<p>the quick fox jump over the lazy dog</p>
+	<p>the quick fox <span>jump</span> over the lazy dog</p>
+	</div>
+	<ul>
+		<li>orange</li>
+		<li><b>yellow</b></li>
+		<li>green</li>
+		<li><span>blue</span></li>
+		<li>yellow</li>
+		<li>green</li>
+		<li>blue</li>
+	</ul>
+
+	
+		<h2>fayaz</h2>
+		<p class="test">the quick fox <b>fayaz</b>jump over the lazy dog</p>
+
+		<p>the quick <span>fox</span> jump over the lazy dog</p>
+
+	
+     <p>the quick fox jump over the lazy dog</p>
+
+	<button class="has">has span</button>
+
+	<button class="hasb">has bold</button>
+
+	<button class="hasbb">has bold and span both</button>
+    
+    <button class="is">is</button>
+	<script>
+		/*
+
+		1) has()     =>target those element having that tag etc/ has(".class"),it search that class in their
+		               children
+
+		2) is()    =>target that only tag having that class,id etc
+		          it is used with if conditions i.e if(is())
+
+		*/
+
+		$(document).ready(function() {
+			$(".has").click(function () {
+				$("p,li").has("span").css({"font-size":"25px","background":"gold"})
+			});
+
+			$(".hasb").click(function () {
+				$("p,li").has("b").css({"font-size":"25px","background":"gold"})
+			});
+
+			$(".hasbb").click(function () {
+				$("p,li").has("b,span").css({"font-size":"25px","background":"gold"})
+			});
+
+
+            $(".is").click(function () {
+            	if ($("p").parent().is("div")) {
+                 $("p").css("background","red");
+            	};
+            });
+
+            $("p").click(function () {
+            	if ($(this).parent().is("div")) {
+            		$(this).css("background","gold");
+            	};
+            });
+			
+		});
+	</script>
+</body>
+</html>

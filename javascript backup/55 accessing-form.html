@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html id="main">
+	<head>
+		
+		
+	</head>
+	<body>
+		<form id="form1" name="first_form">
+			UserName:<input type="text" name="name"><br><br>
+			Password:<input type="password" name="password"><br><br>
+			Email:<input type="email" name="email"><br><br>
+			<input type="submit" name="submit" value="submit">
+		</form>
+		<hr><hr>
+		<form id="form2" name="second_form">
+			UserName:<input type="text" name="s_name"><br><br>
+			Password:<input type="password" name="s_password"><br><br>
+			Email:<input type="email" name="s_email"><br><br>
+			
+			<input type="submit" name="s_submit" value="submit">
+		</form>
+		<script>
+		
+		//document.forms[index-no. of form]
+		//document.forms["name-attribute-value of form"]
+		//document.name_attribut_value
+		//document.getElementById("ID")
+		//preffered top 3s
+
+     //with index number
+     var mform=document.forms[0]
+      console.log(mform);
+
+      var mform=document.forms[1]
+      console.log(mform);
+
+
+    //with name attribute
+    var mform=document.forms["first_form"];
+    console.log(mform);
+    
+
+    var mform=document.forms["second_form"];
+    console.log(mform);
+
+
+
+    //with direct attribute name
+    var mform=document.first_form;
+    console.log(mform);
+
+    var mform=document.second_form;
+    console.log(mform);
+
+
+    //with id name
+   var mform= document.getElementById("form1");
+    console.log(mform);
+
+    var mform= document.getElementById("form2");
+    console.log(mform);
+
+
+		</script>
+	</body>
+</html>

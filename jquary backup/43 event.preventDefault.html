@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body>
+	<div>
+
+	<a href="http://www.google.com" id="prevent">Google</a> prevented
+	<br><br>
+
+	<a href="http://www.google.com">Google</a>
+
+    <h2></h2>
+	
+	</div>
+
+
+	<script>
+		/*
+
+		event.preventDefault()   =>it prevent default property of anchore i.e <a> tag will refer to the given
+		                            refernce, if we want to prevent that property we use this method
+
+		                            it is used with <a> tag and <button> tag
+
+		
+		event.isDefaultPrevented   =>it check wither it is prevented or not                            
+
+
+
+		*/
+
+		$(document).ready(function() {
+		  $("#prevent").click(function (event) {
+		  	event.preventDefault();
+
+		  	var a= event.isDefaultPrevented()
+		  	$("h2").html(a);
+		  });
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+	<div id="outer">
+
+      <h1>Fayaz rashid</h1>
+      we are going to peshawar
+
+	</div>
+	 
+
+
+
+	<script>
+
+		/* 1)appendchild 
+		  and 
+		  2)insertBefore 
+
+		   these two are used to append element only,
+		   it means first to create element and text and then append it
+
+		while
+
+		3)insertAdjacentElement
+		4)insertAdjacentHTML
+		5)insertAdjacentText
+
+		these methods  created and appended ,both are in same method
+
+		if we want to create a tag and then append , then use
+		insertAdjacentElement
+		i.e <p></p>
+
+		if we want to create a tag along with textNode and then append , then use
+		insertAdjacentHTML
+		i.e <p> this is a paragraph </p>
+
+		if we want to create a textNode and then append then use
+		insertAdjacentText
+		i.e This is just text
+
+
+
+
+		insertAdjacent has 4 positions
+
+		1)beforebegin
+		2)afterbegin
+		3)beforeend
+		4)afterend
+
+		*/
+
+		var newelement=document.createElement("h2");
+		var newtext=document.createTextNode("this is text");
+
+		newelement.appendChild(newtext);
+
+      var target=document.getElementById("outer");
+
+      target.insertAdjacentElement("beforebegin",newelement);
+
+
+
+     //insertAdjacentHTML,it donot require neither createElement Nor createtextNode,it is very easy 
+
+     var target=document.getElementById("outer");
+
+     var newelement="<p> peshawar is city </p>"
+
+     target.insertAdjacentHTML("beforebegin",newelement);
+
+    
+
+    //adjacentText
+    var target=document.getElementById("outer");
+
+     var newelement=" peshawar is not city"
+
+     target.insertAdjacentText("beforebegin",newelement);  
+	
+
+
+
+
+	
+	 </script>
+
+</body>
+</html>

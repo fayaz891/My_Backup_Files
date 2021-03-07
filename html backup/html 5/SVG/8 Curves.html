@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+.contianer{background-color:gray;
+              height:500;
+			  width:600;
+			  border:1px;}
+			  
+.contianer1{background-color:gray;
+              height:500;
+			  width:600;
+			  border:1px;}
+</style>
+</head>
+<body>
+path element of cubic bezier curves and quadratic bezier curves
+
+1)Cubic bezier curves(C,S)
+2)Quadratic bezier curves (Q,T)
+
+Cubic bezier curves(C,S) required starting point and ending point and 2 other points(C for cubic curves)
+i.e (M10,50 C20,70 50,30 70,50)
+(S command)
+i.e (M10,50
+     C20,80 40,80 70,50
+	 S100,20 130,60)
+	 
+	 
+in quadratic bezier 0ne (Q command) required between starting point and ending point
+if need 2 quadratic curves in 1 line then (T command) will used  	 
+
+
+<div class="contianer">
+<svg viewbox=" 0,0,150,150">
+
+<path d="M10,50 C20,70 70,-30 70,50" fill="none" stroke="blue">
+</path>
+
+<path d="M40,90 C20,70 50,10 120,100" fill="none" stroke="blue">
+</path>
+
+<path d="M60,110 C20,70 50,10 50,70 S70,20 90,20" fill="none" stroke="blue">
+</path>
+</svg>
+</div>
+<div class="contianer1">
+<svg viewbox=" 0,0,150,150">
+<path d="M10,50 Q20,80 50,50" fill="none" stroke="blue">
+</path>
+
+<path d="M40,70 Q60,60 80,80 T90,50" fill="none" stroke="blue">
+</path>
+</svg>
+
+</div>
+</body>
+</html>

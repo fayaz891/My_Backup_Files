@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button class="in">fadeIn</button>
+	<button class="out">fadeOut</button>
+	<button class="tog">fadeToggle</button>
+	<button class="to">fadeTo</button>
+
+	<script>
+
+		/*
+		1) fadeIn() =>behaive like show() but animation effects are different
+		2) fadeOut()  =>behiave like hide()  but animation effects are different
+		3) fadeToggle()  =>worked fadein and fadeout
+		4) fadeTo()  =>how much it is faded (on the basis of opacity)
+
+		*/
+
+		$(document).ready(function() {
+			$(".out").click(function () {
+				$(".abc").fadeOut("slow"); // parametrs SLOW FAST or in Millisecond i.e (1000)=1sec,(2000)=2sec or callback function
+			});
+
+			$(".in").click(function () {
+				$(".abc").fadeIn(2000,function () {
+					console.log('now it is hidden')
+				});
+			});
+
+            //fadetoggle
+			$(".tog").click(function () {
+				$(".abc").fadeToggle(2000,function () {
+					console.log('now it ishidden')
+				});
+			});
+
+			//fadeto   it has 3parameters(speed,opacity(0..1 value),callback)
+			$(".to").click(function () {
+				$(".abc").fadeTo(3000,0.3,function () {
+					console.log('now hidden it')
+				});
+			});
+		});
+	</script>
+</body>
+</html>

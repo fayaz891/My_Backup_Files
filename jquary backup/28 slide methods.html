@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button class="up">slideup</button>
+	<button class="dw">slidedown</button>
+	<button class="tog">slidetoggle</button>
+
+	<script>
+		/*
+		slide methods   =>same as hide and show but animation is like a sliding
+
+		1) slideDown()  => 
+		2) slideUp()  =>
+		3) slideToggle()  =>work as a slideup and slidedown both
+
+		*/
+
+		$(document).ready(function() {
+			$(".up").click(function () {
+				$(".abc").slideUp(2000);  //parameters of slide(slow,fast,millisecond)and (callback function)
+			});
+
+			$(".dw").click(function () {
+				$(".abc").slideDown(2000,function () {
+					console.log('slidedown completed')
+				});
+			});
+
+			$(".tog").click(function () {
+				$(".abc").slideToggle(2000);
+			});
+		});
+	</script>
+</body>
+</html>

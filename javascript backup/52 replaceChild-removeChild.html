@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+	<div id="outer">
+
+      <h1>Fayaz rashid</h1>
+
+  <ul id="list">
+     <li> Grapes</li>
+     <li> orange</li>
+     <li> banana</li>
+     <li>apple</li>
+  </ul>
+	</div>
+
+
+	 
+    <script>
+
+	//replaceChild, if we want to replace something with new tag
+	var newelement=document.createElement("li");
+          newtext=document.createTextNode("lemon");
+
+       newelement.appendChild(newtext);
+       
+    target=document.getElementById("list");
+
+    //var a=target.children[0];   console.log(a);
+
+    target.replaceChild(newelement,target.children[0]);
+
+    
+
+
+
+    //removeChild, it is used to remove tag
+
+    var target=document.getElementById("list");
+
+    target.removeChild(target.children[1]);
+          
+
+
+
+
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+
+	<p>the quick fox jump over the lazy dog</p>
+
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button>click on paragraph</button>
+
+	<script>
+		/*
+		event.data   =>
+
+		*/
+
+		$(document).ready(function() {
+			$("p").each(function (i) {
+				$(this).on("click",{abc:i},function (event) {
+					alert(event.data.abc)
+				})
+			})
+		});
+	</script>
+</body>
+</html>

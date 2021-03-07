@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		#main{background-color: orange;
+			width: 1000px;
+			height: 350px;
+			position: relative;}
+		#outer{background-color: lime;
+		        width: 900px;
+		        height: 300px;
+		        position: absolute;
+		        margin-top: 25px;
+		        margin-left: 50px;
+		  
+		     }
+
+		#inner{background-color: pink;
+		        width: 820px;
+		        height: 200px;
+		        position: absolute;
+
+		      margin-top: 40px;
+		     margin-right: 40px;
+		     margin-left: 40px;
+		    }
+
+		.a{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left:20px;
+		   margin-top: 50px; 
+		 }   
+		.b{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 190px;
+		  margin-top: 50px; 
+		 }   
+		 .c{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 360px;
+		  margin-top: 50px; 
+		 }   
+		 .d{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 530px;
+		  margin-top: 50px; 
+		 }   
+		 .e{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 700px;
+		  margin-top: 50px; 
+		 }   
+	</style>
+</head>
+<body>
+	<div id="main"><b>main</b>
+	<div id="outer"><b>outer</b>
+
+		<div id="inner"><b>inner</b>
+
+			<li class="a">A</li>
+			<li class="b">B</li>
+			<li class="c">C</li>
+			<li class="d">D</li>
+			<li class="e">E</li>
+
+		</div>
+
+	</div>
+</div>
+
+
+	<button class="child">children</button>
+	<button class="find">find</button>
+
+	<script>
+		/*
+		2) descendants methods  =>target childerens, grandChildern, great grand childern etc
+
+		a) children()   =>target their own children ,not grand children
+		b) find()    =>find in all childs,grand child greatgrandchild etc
+		*/
+
+		$(document).ready(function() {
+			$(".child").click(function () {
+				$("#inner").children().css("background","red");
+				$("#inner").children(".c").css("background","yellow");
+			});
+
+			$(".find").click(function () {
+				$("#inner").find(".d").css("background","white");
+			});
+
+		});
+	</script>
+</body>
+</html>

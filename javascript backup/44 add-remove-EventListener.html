@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#header{text-align: center;
+			        background-color: lightyellow;
+			        border: 1px solid green;}
+
+			#outer{width: 300px;
+			     height: 300px;
+			     background-color: pink;}
+
+			#inner{width: 200px;
+			      height: 200px;
+			      margin: auto;
+			      background-color: yellow;}  
+            #sidebar{background-color: lightblue;
+			        border: 1px solid green;}
+			#nav2{width: 300px;
+			      height: 100px;
+			      background-color: orange;}   
+		</style>
+            }
+		
+	</head>
+	<body>
+		<div id="header">
+			<h1>PRACTICE</h1>
+		</div>
+
+
+
+
+		<div id="outer">
+			outer
+			<div id="inner">
+				inner
+			</div>
+			
+		</div>
+		<div id="sidebar">
+			sidebar
+		</div>
+
+		<div id="nav2">
+			
+		</div>
+
+
+		
+		<script>
+
+			//there are 2 methods to assign events using the HTML DOM
+
+             //first method, we cannot add 2 or more events on single div 
+         document.getElementById("sidebar").onmouseenter=abc;
+            
+            function abc() {
+            document.getElementById("sidebar").style.border="3px solid green";
+            }
+
+
+         //2nd method, DOM addEventListener() Method, this method is best to use and have more advantages
+         //adding event doesnot use ON i.e onClick is click
+
+         document.getElementById("header").addEventListener("click",function abc() {
+           document.getElementById("header").style.border="5px dotted green";} ); 
+
+         document.getElementById("header").addEventListener("mouseenter",function abc() {
+            this.style.backgroundColor = "yellow"} ); 
+
+         //now 3rd parameter after event and function which is optional. 1)event 2)function 3)useCapture
+        document.querySelector("#inner").addEventListener("click",function() {
+        alert("inner div");},true);
+
+
+        document.querySelector("#outer").addEventListener("click",function() {
+        alert("outer div");},true);
+
+        //removeEventListener() method,if we want to remove anything in future
+
+        //1st i add function abc on mouseenter event
+        document.querySelector("#nav2").addEventListener("mouseleave",abc);
+
+        function abc () {document.querySelector("#nav2").style.border="4px solid green" };
+        //if someone click then remove that event and the div remain its own style
+        document.querySelector("#nav2").addEventListener("click",xyz);
+
+        function xyz () {
+        	document.querySelector("#nav2").removeEventListener("mouseleave",abc);
+       
+        }
+
+       
+		</script>
+		
+	</body>
+</html>

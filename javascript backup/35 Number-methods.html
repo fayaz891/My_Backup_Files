@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+//number methods
+
+//number(), it change any number in string into Number
+var  a="99";
+
+var b=Number(a);  //N in captal (Number)
+document.write(b);
+
+//check
+document.write(b+10); //b is converted into number
+
+//true return '1' and false return '0', and space ,other letters etc return NaN (not a number)
+var  a=true;
+var b=Number(a); 
+document.write(b);
+
+
+
+
+
+//parselnt(), it change dacimal nmbr into integers (it remove nmbrs after decimals)
+//while
+//parseFloat(), it return all numbers,before decimal and after dacimal,
+
+var a="10.33";
+var b=parseInt(a);
+document.write(b);
+
+var a="50 years"; //it return only 50
+var b=parseInt(a);
+document.write(b);
+
+var a="years 50"; //it does not found any integers in start,so return NaN
+var b=parseInt(a);
+document.write(b);
+
+
+
+//parseFloat(), it return total nmbr,before decimal and after dacimal
+var a="10.33"; 
+var b=parseFloat(a);
+document.write(b);
+
+
+
+
+//isFinite(),it check condition and check a number that is it finite or inFinite,if finit then return 'true' if in finit then return 'false'
+//isInteger(), it check nmbr that is given nmbr itegers or not,if integer found it return 'true' if not then return 'false' 
+
+var a="100";  //number will return true while letters return false
+var b=Number.isFinite(a);
+document.write(b);
+
+var a=100;
+var b=Number.isFinite(a);
+document.write(b);
+
+
+
+
+//isIntegers()  , integer means number which dont hv decimal, 10 is integer while 10.1 is not integer and 10.1 is called float value
+
+var a=100; 
+var b=Number.isInteger(a);
+document.write(b);
+
+var a="100"; 
+var b=Number.isInteger(a);
+document.write(b);
+
+
+
+
+//toFixed(), it is used for roundoff ,e.g 3.446 into 3.45 etc
+var a=3.5564; 
+var b=a.toFixed(2);
+document.write(b);
+var a=4.34567; 
+var b=a.toFixed(3);
+document.write(b);
+
+
+//toPrecision(), it is used for round about i.e 3.56 into 3.6
+var a=4.34567; 
+var b=a.toPrecision(3);
+document.write(b);
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

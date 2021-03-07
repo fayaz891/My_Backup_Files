@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="abc">
+		
+	<h2>fayaz</h2>
+
+	<b>the quick fox jump over the lazy dog </b>
+	<p>the quick fox jump over the lazy dog </p>
+	</div>
+
+	
+	<p>the quick fox jump over the laz y </p>
+
+	<button class="all">wrapAll</button>
+	<button class="inner">wrapInner</button>
+
+	<script>
+
+		/*
+		wrapAll()   =>if we want to wrap(put) different tags in a single tag
+		wrapInner()  => it will worked on inner side i.e if it apply on h2 it worked as a child 
+
+		*/
+
+		$(document).ready(function() {
+			$(".all").click(function () {
+				$("p,b").wrapAll("<div style='background:pink;'></div>")
+			});
+
+			$(".inner").click(function () {
+				$("h2").wrapInner("<span style='color:red';><i><b></b></i></span>")
+			});
+		});
+	</script>
+</body>
+</html>

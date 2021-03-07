@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#header{text-align: center;
+			        background-color: lightyellow;
+			        border: 1px solid green;}
+
+			#nav{list-style:none;
+			     flow: left;
+			     text-decoration:none;}
+
+			#sidebar{font-size:20px;}  
+
+			.content{background-color: tan;} 
+
+			.classAddWithJs{background-color:pink;
+			                border:1px solid orange;}
+
+			.class{line-height: 50px;
+			       letter-spacing:10px;}                   
+		</style>
+		
+	</head>
+	<body>
+		<div id="header" class="content" style="border:1px solid red;">
+			<h1>PRACTICE</h1>
+		</div>
+
+		<div>
+			<ul id="nav">
+				<li>home</li>
+				<li>gallery</li>
+			</ul>
+		</div>
+
+		<div class="content abc">
+			<p>it is a hard day when we was climbed on a mountain and some of us are very tired and we enjoy alot there</p>
+		</div>
+
+		<div id="sidebar" >
+			<p>it is a hard day when we was climbed on a mountain and some of us are very tired and we enjoy alot there</p>
+		</div>
+
+
+		
+		<script>
+       /* DOM CSS styling methods are 3
+        style
+        className
+        classList
+
+        we can SET and GET any CSS with the help of these
+
+        */
+
+          //style name method
+        document.querySelector("#header").style.border="3px dotted blue"
+     
+        document.querySelector("#header").style.backgroundColor="green";
+
+        
+
+         //class name method
+         document.querySelector("#nav").className="classAddWithJs class";
+
+
+        //classList
+        //classList.Add , we can add any class with JS
+        var a=document.querySelector("#sidebar").classList.add("classAddWithJs","class");
+
+        //classList.remove,we can remove any class with JS
+          var a=document.querySelector("#sidebar").classList.remove("class");
+		</script>
+		
+	</body>
+</html>

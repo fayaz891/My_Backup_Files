@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: pink;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog the quick fox jump over the lazy dog the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button>click me</button>
+
+	<script>
+		/*
+		event.stopPropagation()     =>if we click on one tag,the parent div click also clicked,
+		                              to prevent that use this event
+
+		event.isPropagationStopped()   =>it gives true or false result, it checked 
+		                                 wether stopPropagation is applied or not
+
+		*/
+
+		$(document).ready(function() {
+		   $(".abc").click(function (event) {
+		   	alert("div element is clicked  "+ event.isPropagationStopped());
+		   });
+
+		    $("h2").click(function (event) {
+		    	event.stopPropagation();
+		   	alert("h2 element is clicked  "+ event.isPropagationStopped());
+		   });
+
+		    $("p").click(function () {
+		   	alert("p element is clicked")
+		   });
+
+		    $("button").click(function () {
+		   	alert("button element is clicked")
+		   });
+		});
+	</script>
+</body>
+</html>

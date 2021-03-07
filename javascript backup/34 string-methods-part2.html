@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+
+//charAt(), in this character function we define a position it will return  characters of that value
+var a="fayaz is agood boy he is a good player in cricket";
+
+var b=a.charAt(2); //on(0)f, on(1)a, on(2)y
+document.write(b);
+document.write("<br>");
+
+
+
+//in keyboard every key has thier own skycode(charcter code,unique code(search in goole to find)),i.e for A=65, for Z=90,for a=97, for (=40,for 0=48,for '='=61 etc
+
+//charCodeAt(), in this function it return skycode of that value which is defined in funtion i.e
+var a="fayaz is agood boy he is a good player in cricket";
+var b=a.charCodeAt(1); //for 'a' is 97
+document.write(b);
+document.write("<br>");
+
+
+
+//fromCharCode(), in this if we give any skycode in its function it will return sign(key sign) of that number, it dont need any varaible bc it defines key sign ,not search in defined string
+
+
+var a=String.fromCharCode("66"); //66 is skycode of B
+document.write(a);
+document.write("<br>");
+
+
+
+
+//concat(), it is used to concat(merge) more then one strings
+var a="fayaz is agood boy he is a good player in cricket";
+var b="great player";
+var c="learned javascript"
+
+ var d=a.concat(b,c);
+ document.write(d);
+document.write("<br>");
+
+
+
+
+
+//split(), it is seperat each word in string and convert it into an array
+var a="fayaz is agood boy he is a good player in cricket";
+
+var b=a.split(" "); // i seperat it there where space is found in a string
+document.write(b);
+document.write("<br>");
+
+//or
+var b=a.split("a");
+document.write(b);
+document.write("<br>");
+
+
+
+
+//repeat(). it repeted a string if we give any nmbrs for repeating
+var a="fayaz is agood boy he is a good player in cricket";
+var b=a.repeat(3);
+document.write(b);
+document.write("<br>");
+
+
+
+//slice(), it is same as array slice function,we give 2 points in slice and take only these values in a string,the remaining will removed, in string we take any part from the string
+//-1,-2 etc ,minus value take start from the end side
+var a="fayaz is agood boy he is a good player in cricket";
+var b=a.slice(3, 15);
+document.write(b);
+document.write("<br>");
+
+
+
+
+//substr() and substring() ,these are same as slice but littile difference,
+var a="fayaz is agood boy he is a good player in cricket";
+var b=a.substr(3,15); //3 means start from letter 3 and 15 means that 15 letters are selected
+document.write(b);
+document.write("<br>");
+
+//substring
+var b=a.substr(3,15); //start from 3 upto 15,it is same with slice ,in slice 15th letter selected while in substring 15th will not selected
+document.write(b);
+document.write("<br>");
+
+
+
+//tostring(),it change every variable into string
+var a=50;
+var b=a.toString(); //it is not a number ,it is string
+document.write(b);
+document.write("<br>");
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

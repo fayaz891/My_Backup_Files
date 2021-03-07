@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		//array literal
+var a=[" fayaz "," hamad "," zafar "];
+document.write(a);
+document.write("<br>");
+
+document.write(a[1]);
+
+document.write(a[0]);
+
+document.write(a[2]);
+document.write("<br>");
+
+
+//declare array 1st and then assign value
+var abc=[];
+
+abc[0]="good";
+abc[1]="better";
+abc[2]="best";
+document.write(abc);
+document.write("<br>");
+
+
+//assign variable first
+var a=5, b=6, c=7;
+
+var abc=[a,b,c];
+document.write(abc);
+document.write("<br>");
+
+
+
+//modifying new value to array
+var abc=["fayaz", 35 , true];
+document.write(abc +" ");
+abc[1]=46;
+document.write(abc);
+document.write("<br>");
+
+
+//one array store in other name
+var abc=[35,45,55];
+abcd=abc;
+document.write(abcd);
+document.write("<br>");
+
+
+
+//removing/delete array value, but its length will remain store ([1] its length)
+var abc=[35,45,55];
+document.write(abc +" ");
+delete abc[1];
+document.write(abc);
+document.write("<br>");
+
+/* array constructor
+
+(it is not used mostly bc it has alot of demarits i.e single numaric value does not printed in constructor array )*/
+
+var a=new Array("fayaz"," hamad");
+document.write(a);
+
+document.write(a[1]);
+
+   
+
+	</script>
+	
+		</head>
+<body>
+	
+</body>
+</html>

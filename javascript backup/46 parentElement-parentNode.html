@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	<style>
+		#outer{background-color: orange;
+		        width: 900px;
+		        height: 300px;
+		        position: relative;
+		  
+		     }
+
+		#inner{background-color: pink;
+		        width: 820px;
+		        height: 200px;
+		        position: absolute;
+
+		      margin-top: 40px;
+		     margin-right: 40px;
+		     margin-left: 40px;
+		    }
+
+		.a{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left:20px;
+		   margin-top: 50px; 
+		 }   
+		.b{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 190px;
+		  margin-top: 50px; 
+		 }   
+		 .c{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 360px;
+		  margin-top: 50px; 
+		 }   
+		 .d{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 530px;
+		  margin-top: 50px; 
+		 }   
+		 .e{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 700px;
+		  margin-top: 50px; 
+		 }   
+
+		
+	</style>
+	
+</head>
+<body>
+	<div id="outer">
+
+		<div id="inner">
+
+			<li class="a">A</li>
+			<li class="b">B</li>
+			<li class="c">C</li>
+			<li class="d">D</li>
+			<li class="e">E</li>
+
+		</div>
+
+	</div>
+	 
+
+
+
+	<script>
+	/*traversal methods
+
+	 1) parentNode
+	 2) ParentElement
+
+	 3) Children
+	 4) childNodes
+
+	 5) firstChild
+	 6) firstElementChild
+
+	 7) lastChild
+	 8) lastElementChild
+
+	 9) nextElementSibling
+	 10) nextSibling
+
+	 11) previousElementSibling
+	 12) previousSibling        */
+
+
+    //parentElement ,(element means tag)
+
+    var a=document.getElementById("inner").parentElement;
+      console.log(a);
+
+    var a=document.getElementById("outer").parentElement;
+      console.log(a);
+
+    var a=document.body.parentElement;
+		console.log(a);
+
+	/*var a=document.html.parentElement;
+	 console.log(a);
+        and html donot have parentElement, it means it donot have parent tag*/
+
+   //we can do anything by targeting with parentElement
+   document.getElementById("outer").parentElement.style.background="red";
+
+
+    
+    //parentNode, it is almost same with parentElement, but it can return something must if some tags dont have parentElement
+    //now i test a tag which dont have a parent tag,i can see what result it give 
+
+   var a=document.getElementById("main").parentNode;
+     console.log(a);
+
+   //now parentElement
+   var a=document.getElementById("main").parentElement;
+     console.log(a);
+
+
+
+
+
+
+
+
+	 </script>
+
+</body>
+</html>

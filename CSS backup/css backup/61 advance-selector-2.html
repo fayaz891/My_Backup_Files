@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attribute selector</title>
+	<style>
+		img[alt]{border: 3px dotted green;}
+
+		input[type="password"]{border: 2px solid red;}
+		img[width^="40"]{border: 3px solid blue;}
+
+		img[height$="50"]{border: 3px solid green;}
+		img[width*="35"]{border: 3px solid red;}
+
+		img[alt~="of"]{border: 3px solid yellow;}
+	</style>
+</head>
+<body>
+	<h1>Attributes selector</h1>
+<li>A[attr]</li>
+<li>A[attr=val]</li>
+<li>A[attr^=val]</li>
+<li>A[attr|=val]</li>
+<li>A[attr$=val]</li>
+<li>A[attr*=val]</li>
+<li>A[attr~=val]</li>
+
+<br><br><br>
+
+<h2>A[attr]</h2>
+element with spacific attribute<br>
+<img src="abcd.jpg" width="300" height="200" alt="image of fayaz">
+
+<img src="abcd.jpg" width="300" height="200">
+
+<br><br><br>
+
+<h2>A[attr=val]</h2>
+attribute whose value is exactly value<br>
+name:<input type="text"><br>
+password:<input type="password"><br>
+address:<input type="text"><br>
+
+<br><br><br>
+
+<h2>A[attr^=val]</h2>
+select those whose attribute begins value are same i.e width of 2nd img start with 4<br>
+
+<img src="abcd.jpg" width="300" height="200">
+
+<img src="abcd.jpg" width="400" height="200">
+<br><br><br>
+
+<h2>A[attr|=val]</h2>
+attribute begins with value OR first in a dash separated list
+,it is almost no used
+<br><br><br>
+
+<h2>A[attr$=val]</h2>
+attributes ends with value,its height ends with 50<br>
+<img src="abcd.jpg" width="300" height="250">
+
+<img src="abcd.jpg" width="300" height="200">
+<br><br><br>
+
+
+
+<h2>A[attr*=val]</h2>
+value occurs anywhere in attribute<br>
+<img src="abcd.jpg" width="350" height="200">
+
+<img src="abcd.jpg" width="300" height="200">
+<br><br><br>
+
+
+
+<h2>A[attr~=val]</h2>
+value matches attribute in space seperated list, of seperated by space on both side<br>
+
+<img src="abcd.jpg" width="300" height="200">
+
+<img src="abcd.jpg" width="300" height="200" alt="img of fayaz">
+<br><br><br>
+
+</body>
+</html>

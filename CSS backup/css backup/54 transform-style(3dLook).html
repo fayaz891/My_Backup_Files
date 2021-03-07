@@ -1,0 +1,85 @@
+<html>
+<head>
+<style>
+
+.p1{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:100px;
+	 
+	 perspective:600px;
+	 
+	 transform:rotateY(30deg);
+	 }	
+.r1{background:pink;
+    text-align:center;
+	 margin:50px auto;
+	 width:150px;
+	 height:100px;
+	 
+	 transform:rotateX(60deg);}		
+
+	 
+	
+.p2{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:100px;
+	 
+	 perspective:600px;
+	 
+	 transform:rotateY(30deg);
+	 
+	 transform-style:preserve-3d;}	
+.r2{background:pink;
+    text-align:center;
+	 margin:50px auto;
+	 width:150px;
+	 height:100px;
+	 
+	 transform:rotateX(60deg);}
+	 
+.p3{background:red;
+	 margin:0 0 70px 100px;
+	 width:150px;
+	 height:100px;
+	 opacity:70%;
+	 
+	 perspective:200px;
+	 
+	 transform:rotateY(30deg);
+	 transform-style:preserve-3d;
+	 }	
+.r3{background:pink;
+    text-align:center;
+	 width:150px;
+	 height:100px;
+	 transition:transform 5s;
+	 
+	 transform:rotateX(0deg);
+	 transform-origin:bottom;}
+	 
+.r3:hover{transform:rotateX(360deg);}	 
+		   
+</style>
+</head>
+
+<body>
+preserve-3d always on parent div
+
+<div class="p1">
+<div class="r1">FAYAZ</div>
+</div>
+
+
+<div class="p2">
+<div class="r2">FAYAZ</div>
+</div>
+
+<div class="p3">
+<div class="r3">FAYAZ</div>
+</div>
+
+
+</body>
+</html>

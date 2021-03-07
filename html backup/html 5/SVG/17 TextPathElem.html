@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+.contianer{background-color:#egf;
+              height:500;
+	    width:600;
+	  border:1px;}
+.test{font-size:13px;}
+	  
+</style>
+</head>
+<body>
+defs tag hide other tags
+
+<div class="contianer">
+<svg viewbox=" 0,0,100,100">
+
+<defs>
+<path id="shape" d="M10,50 A40,30 0 0,1 80,50" stroke="blue" fill="none">
+</path>
+</defs>
+
+<text class="test">
+<textpath xlink:href="#shape" > Fayaz Rashid
+</textpath>
+</text>
+</svg>
+</div>
+<svg>
+
+</svg>
+
+</div>
+</body>
+</html>

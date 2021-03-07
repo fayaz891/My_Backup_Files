@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+    /*indexof() function checked a value(i.e Aman searched) and then return its index no. (i.e if aman is on no.2 ,it show its indx nmbr '1',)
+
+    if aman name is on no.2 and on no.5,it will show only no.2 value index nmbr and if we give starting point is like '3' then it show index no. of aman'5
+
+    if we search a value which is not present in array ,then indexof show '-1' index no.
+    	*/
+
+    var a=["fayaz", 25, "zafar", 36, 42,"mahan", "zafar"];
+
+   var b=a.indexOf("zafar");
+   document.write(b);
+   document.write("<br>");
+
+
+    //starting point is index no.4
+    var a=["fayaz", 25, "zafar", 36, 42,"mahan", "zafar"];
+    var b=a.indexOf("zafar", 4);
+    document.write(b);
+   document.write("<br>");
+
+
+   //lastindexof() function same as indexof but it start search avalue from ending point or from last,it give same result as indexof but search from last
+
+   var a=["fayaz", 25, "zafar", 36, 42,"mahan", "zafar"];
+     var b=a.lastIndexOf("zafar",3);
+     document.write(b);
+      document.write("<br><br>");
+
+
+
+// includes() function. Search a name of value in an array it give result either 'true'(if present) or 'false'(if not present)
+
+ var a=["fayaz", 25, "zafar", 36, 42,"mahan", "zafar"];
+ var b=a.includes("mahan");
+ var c=a.includes("hamad");  
+document.write(b+"<br>"+c);
+document.write("<br>");
+
+
+//some() function .check values from a single point to the end,check every value in array,if only a single value passed in condition it show true(we also use forLoop along with if conditions,but that one lengthy), it is not used commonly
+
+ var a=[12,23,34,45,57,78,78];
+var b=a.some(abc);
+document.write(b);
+
+ function abc(age) {
+  return age>=30;
+  }
+ document.write("<br>");
+
+//every() function .check every value and required every value to passed in condition then show true otherwise it will false, its total method same as some function
+ var a=[12,23,34,45,57,78,78];
+var b=a.every(abc);
+document.write(b);
+
+ function abc(age) {
+  return age>=30;
+  }
+document.write("<br>");
+
+  
+
+     //find () function . find a value which passed a condition 1st and print that value
+
+  var a=["fayaz", "hamad", 6, 16, 23, 30];
+  var b=a.find(abc);
+  function abc (bc) { return(bc>=18);
+  }
+document.write(b);
+
+
+//findIndex(). it find and print  the index numbr of that value which passed a condition 1st.
+var a=["fayaz", "hamad", 6, 16, 23, 30];
+  var b=a.findIndex(abc);
+  function abc (bc) { return(bc>=18);
+  }
+document.write(b);
+
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

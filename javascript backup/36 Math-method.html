@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+//Math Methods
+// Meth methods are not normally used in websites ,it is mostly used for animation or for vedio games development or complex accounting web application
+
+
+//ceil method(), it is used when the numbr is in float form(i.e 3.4 , 4.2 , 1.4 etc) and change this float or decimal nmbr into nearest upper intigers (i.e 3.3 into 4, 4.1 into 5, 1.5 into 2, -2.7 into 2, -1.45 into 1 etc)
+
+var a=Math.ceil(2.2) 
+document.write(a);
+document.write("<br>");
+
+
+//floor function(), it is opposit into ceil, it gives downward value(i.e 3.6 into 3, 4.2 into 4, -3.3 into -4, -4.5 into -5 etc)
+var a=Math.floor(2.2); 
+document.write(a);
+document.write("<br>");
+
+
+//round(x), if dacimal nmbr after dacimal is greater then 5 or 5 ,then it gives upper value ,if less then 5 it gives downward value(i.e 2.2 into 2, 4.6 into 5 etc)
+var a=Math.round(2.2); 
+document.write(a);
+document.write("<br>");
+
+
+//trunc(x), it does not give value after dacimal,(i.e 2.2 into 2, 4.4 into 4,5.7 into 5 etc), after dacimal it cant return
+var a=Math.trunc(2.2); 
+document.write(a);
+document.write("<br>");
+
+
+//max(x,yz....n), it shows highest value in a variable
+var a=Math.max(8,2,10,25,50);
+document.write(a);
+document.write("<br>");
+
+
+//min(xyz...n) it shows lowest value in a variable
+var a=Math.min(8,2,10,25,50);
+document.write(a);
+document.write("<br>");
+
+
+//sqrt(x) it shows squar root of a value
+var a=Math.sqrt(25);
+document.write(a);
+document.write("<br>");
+
+
+//cbrt(x), it shows cubic root of a value(i.e 125=5*5*5, 27=3*3*3, so it shows 5 of 125 and 3 of 27)
+var a=Math.cbrt(64); //its ans is 4,bc 4*4*4=64
+document.write(a);
+document.write("<br>");
+
+
+//pow(x,y), pow means power of,  x is base value and y is exponential value
+var a=Math.pow(2, 9);// 2*2*2*2*2*2*2*2*2=512
+document.write(a);
+document.write("<br>");
+
+
+//random(), by default it shows value b/w 0 and 1, and change value everytime by refreshing, if we give any value then it show randow value between 0 and that value
+var a=Math.random();
+document.write(a);
+document.write("<br>");
+
+    //if we want to give any values
+
+    //mathfloor is used for lower value and +1 is used for positive value
+
+var a=Math.floor(Math.random() * 100)+1;
+document.write(a);
+document.write("<br>");
+
+
+//abs(), absolute function gives absolute value,remove minus sign by using abs(),
+var a=Math.abs(-25);
+document.write(a);
+document.write("<br>");
+
+var a=Math.abs(2.35);
+document.write(a);
+document.write("<br>");
+
+var a=Math.abs(null);
+document.write(a);
+document.write("<br>");
+
+var a=Math.abs("hello"); //hello is not a number thts why shows NaN
+document.write(a);
+document.write("<br>");
+
+var a=Math.abs(2+3+5*4);
+document.write(a);
+document.write("<br>");
+
+
+//PI(x) ,pi shows PI value which is 22/7 or 3.14
+var a=Math.PI;
+document.write(a);
+document.write("<br>"); 
+
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

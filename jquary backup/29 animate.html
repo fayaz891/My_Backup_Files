@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.abc{width: 200px;
+		    height: 100px;
+		    background-color: green;
+		    position: relative;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	  <p>fayaz rashid</p>
+	</div>
+	<div class="ab" style="width: 100px;height: 100px;background-color: red;position: relative;">fayaz</div>
+
+	<button class="animate">animate</button>
+	<button class="ani">ani</button>
+
+	<script>
+		/* animate methode   =>we can animate any tag with the help of this method
+
+		1) animate()
+
+		for animation of tag position must be given
+
+		$(selector).animate({params},speed,callback)
+
+		params => almost any CSS property except color and background color
+
+		css property should be in Camel Case, i.e padding-left is like paddingLeft
+
+		*/
+
+		$(document).ready(function() {
+			$(".animate").click(function () {
+				$(".abc").animate({
+					left:"+=150px",   //if we want to animate tag by left top... then position must be given
+					                  //+= means that on every time keypress it move 150+150+150px...
+					fontSize:"40px",width:"300px",//width:"hide",width:"toggle",width:"+=100px"
+					fontWeight:'800',height:"200px"// same is above
+
+				},2000);
+			});
+
+
+		});
+
+		$(document).ready(function () {
+			$(".ani").click(function () {
+				$(".ab").animate({left:"250px",fontSize:"25px"},3000);
+				$(".ab").animate({top:"150px"},"slow");
+				$(".ab").animate({width:"150px"},function () {
+					$(".ab").css("background","yellow");
+				});
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	<style>
+		#outer{background-color: orange;
+		        width: 900px;
+		        height: 300px;
+		        position: relative;
+		  
+		     }
+
+		#inner{background-color: pink;
+		        width: 820px;
+		        height: 200px;
+		        position: absolute;
+
+		      margin-top: 40px;
+		     margin-right: 40px;
+		     margin-left: 40px;
+		    }
+
+		#a{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left:20px;
+		   margin-top: 50px; 
+		 }   
+		#b{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 190px;
+		  margin-top: 50px; 
+		 }   
+		 #c{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 360px;
+		  margin-top: 50px; 
+		 }   
+		 #d{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 530px;
+		  margin-top: 50px; 
+		 }   
+		 #e{background-color: yellowgreen;
+		   width: 100px;
+		   height: 90px;
+		  position: absolute;
+		  margin-left: 700px;
+		  margin-top: 50px; 
+		 }   
+
+		
+	</style>
+	
+</head>
+<body>
+	<div id="outer">
+
+       <h1>outer</h1>
+
+		 <div id="inner">
+
+            <h2>inner</h2>
+
+			   <li id="a">A</li>
+			   <li id="b">B</li><li id="c">C</li>
+			   <li id="d">D</li>
+			   <li id="e">E</li>
+
+		</div>
+
+	</div>
+	 
+
+
+
+	<script>
+	/*traversal methods
+
+	 1) parentNode
+	 2) ParentElement
+
+	 3) Children
+	 4) childNodes
+
+	 5) firstChild
+	 6) firstElementChild
+
+	 7) lastChild
+	 8) lastElementChild
+
+	 9) nextElementSibling
+	 10) nextSibling
+
+	 11) previousElementSibling
+	 12) previousSibling        */
+
+
+   
+
+   //nextElementsibling,
+
+   var a=document.getElementById("b").nextElementSibling;
+   console.log(a);
+
+   document.getElementById("b").nextElementSibling.style.border="2px solid green"
+
+
+   var a=document.getElementById("e").nextElementSibling;
+   console.log(a);  //it return null bc donot have nextsibling 
+
+
+   //previousElementSibling,
+   var a=document.getElementById("b").previousElementSibling;
+   console.log(a);
+
+   document.getElementById("b").previousElementSibling.style.border="2px solid red"
+
+
+
+//Element means tag, it show next and previous tags
+
+
+
+//nextsibling, it show textNode
+var a=document.getElementById("b").nextSibling;
+   console.log(a);
+
+var a=document.getElementById("c").nextSibling;
+   console.log(a);
+   
+//previousSibling
+var a=document.getElementById("c").previousSibling;
+   console.log(a);
+
+ var a=document.getElementById("b").previousSibling;
+   console.log(a);  
+
+
+
+	 </script>
+
+</body>
+</html>

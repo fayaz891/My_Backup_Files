@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+
+.p1{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 text-align:center;
+	 
+	 animation:sample1 3s 2s;
+	 
+	 animation-fill-mode:backwards;
+	  }
+	  
+.p1:hover{animation-play-state:paused;}	  
+	  
+@keyframes sample1{0%{background:yellow; width:250;}
+                   50%{background:green; width:350;}
+				  100%{background:red; width:450;}}	 	 	  
+.p2{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 text-align:center;
+	 
+	 animation:sample1 3s 2s;
+	 
+	 animation-fill-mode:forwards;
+	 
+	 animation-play-state:paused;
+	  }
+.p2:hover{animation-play-state:running;}	  
+	  
+@keyframes sample1{0%{background:yellow; width:250;}
+                   50%{background:green; width:350;}
+				  100%{background:red; width:450;}}	 
+
+.p3{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 text-align:center;
+	 
+	 animation:sample1 3s 2s both;
+	  }
+	  
+@keyframes sample1{0%{background:yellow; width:250;}
+                   50%{background:green; width:350;}
+				  100%{background:red; width:450;}}	 	 	  
+				  
+
+.p4{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 text-align:center;
+	 
+	 animation:sample1 3s 2s none;
+	  }
+	  
+@keyframes sample1{0%{background:yellow; width:250;}
+                   50%{background:green; width:350;}
+				  100%{background:red; width:450;}}	 	 	  
+
+</style>
+</head>
+
+<body>
+
+
+<div class="p1">FAYAZ
+</div>
+
+
+<div class="p2">RASHID
+</div>
+
+<div class="p3">
+</div>
+
+<div class="p4">
+</div>
+
+
+</body>
+</html>

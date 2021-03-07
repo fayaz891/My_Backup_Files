@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+	<div id="outer">
+
+      <h1>Fayaz rashid</h1>
+     <p id="ab"> this is usd to learn contains method</p>
+
+	</div>
+
+  
+  <div id="list">
+  	<li>orange</li>
+  	<li>banana</li>
+  	<li>grapes</li>
+  	<li>lemon</li>
+  </div>
+
+  <div id="list1">
+  	<li>orange</li>
+  	<li>banana</li>
+  	<li>grapes</li>
+  	<li>lemon</li>
+  </div>
+	 
+    <script>
+   
+   //hasAttribute()
+   //hasChildNodes()
+
+   //hasAttributes, we can check any attribute in a div by targeting it with id,tag,className etc, it also give true or false result
+
+    var target=document.getElementById("outer");
+
+    find=target.hasAttribute("class");
+
+    console.log(find);
+
+
+    //haschildNodes(), it is used to find childNodes in an ID,it also give true or false
+
+    var target=document.getElementById("ab");
+    var find=target.hasChildNodes();
+    console.log(find);
+
+
+
+
+    //isEqualNode(), it is used to compare one thing with others in different divs etc, it also return true or false
+
+    /*if it return true it must have
+
+     1) same Node type   i.e nmbr compare with nmbr and string with strng
+     2) same nodename    i.e  li compare with li tag
+     3) same nodeValue   i.e text will same
+     4) same childNodes  i.e if childs,then will same
+     5) same attributes  i.e if attributes,then will same
+     6) same attibute values   i.e values in attr will same  */
+
+    
+
+    //isEqual()
+    var target=document.getElementById("list").firstElementChild;
+
+    var target2=document.getElementById("list1").firstElementChild;
+
+   var equal=target.isEqualNode(target2);
+
+   console.log(equal);
+
+
+
+
+
+var target=document.getElementById("list").firstElementChild;
+
+    var target2=document.getElementById("list1").children[0];
+
+   var equal=target.isEqualNode(target2);
+
+   console.log(equal);
+    
+	 </script>
+
+</body>
+</html>

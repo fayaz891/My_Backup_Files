@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		
+
+	//concat function (merge variabls) 1st method
+		
+		var a=["fayaz","hamad","zafar","mahan"];
+        var b=["adnan","sohail"];
+        var c=["sadia","nadia"]
+
+        var d=a.concat(b,c);
+
+        document.write(d);
+   
+
+ document.write("<br><br>");
+
+    //concat function (merge to variabls) 2st method
+   		var a=["fayaz","hamad","zafar","mahan"];
+
+        var b=a.concat("waqas","adnan");
+		document.write(b);
+      
+      document.write("<br><br>");
+
+
+
+   //join function (many values in variable make a single value 'make a singlr string') 
+    var a=["fayaz","hamad","zafar","mahan"];
+
+    var b=a.join("/");
+ 
+    document.write(b);
+    document.write("<br><br>");
+
+
+  // slice function (it took some values from a variable make a new variable) (taking 2 index no. starting index and ending index to get value)
+
+   var a=["fayaz","hamad","zafar","mahan","sadia","nadia","rabia"]; 
+  
+  var b=a.slice(3, 5);
+  document.write(b);
+    document.write("<br><br>");
+
+   var b=a.slice(3);
+  document.write(b);
+    document.write("<br><br>");  
+
+    var b=a.slice(-3,-1);  //negativ nmbr start from ending side
+  document.write(b);
+    document.write("<br><br>");  
+
+
+   //splice function (if we add some values to variable in middle(if add value to start or to end then use push and unshift))
+
+   var a=["fayaz","hamad","zafar","mahan","sadia","nadia","rabia"];
+
+   a.splice(2, 0, "nasim","karim")
+   document.write(a);
+
+document.write("<br><br>");
+
+   var a=["fayaz","hamad","zafar","mahan","sadia","nadia","rabia"];
+   a.splice(2, 3, "nasim","karim")//if pass negative value it worked from opposite side
+   document.write(a);
+
+
+
+</script>
+
+  
+       
+	
+		</head>
+<body>
+	
+</body>
+</html>

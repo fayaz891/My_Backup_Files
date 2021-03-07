@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>css class</title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.add{font-size: 20px;
+		     border:1px solid green;
+		     background-color: pink;
+		     border-radius: 5px;}
+        .ab{background-color: red;
+        	border:2px,solid yellow;
+        	border-radius: 10px;}
+        .a{font-size: 30px;}	
+
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+	<button id="btn1">add</button>
+	<button id="btn2">remove</button>
+	<button id="btn3">toggle</button>
+
+	<script>
+		/*
+		CSS class methods
+		we can add or remove any css class with the help of jquery
+
+		1) addClass()
+		2) removeClass()
+		3) toggleClass()   =>onclick add or removed and on again click held its opposite
+
+
+		*/
+		$(document).ready(function() {
+			$("#btn1").click(function () {
+				$("h2").addClass("add ab");
+			});
+
+			$("#btn2").click(function () {
+				$("h2").removeClass("add");
+			});
+
+			$("#btn3").click(function () {
+				$(".abc,p").toggleClass("ab a");
+			});
+
+		});
+	</script>
+</body>
+</html>

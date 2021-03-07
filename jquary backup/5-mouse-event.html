@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		
+		.div{border:2px solid green;
+		   background-color: yellow;}
+	</style>
+</head>
+<body>
+	<div class="div">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<script>
+		/*
+		mouse events
+
+		1) click()
+		2) dblclick()
+		3)contextmenu()   => rightclick
+		4) mouseenter()
+		5 mouseleave()
+
+		*/
+		$(document).ready(function() {
+
+			$("div").click(function () {
+				$(this).css("background","pink");
+
+                 });
+			
+
+			$(".div").dblclick(function () {
+				$(this).css("color","red")
+			   });	
+
+
+            $("h2").contextmenu(function () {
+				$(this).css("font-size","30px")
+			   });
+
+
+            $("p").mouseenter(function () {
+				$(this).css("background","blue")
+			   });
+
+
+            $("div").mouseleave(function () {
+				$(this).css("padding","10px")
+			   });
+
+
+			
+		});
+	</script>
+</body>
+</html>

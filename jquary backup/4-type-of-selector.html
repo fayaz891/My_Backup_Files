@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+
+	<ul>
+		<li>orange</li>
+		<li>yellow</li>
+		<li> green</li>
+		<li> blue</li>
+	</ul>
+
+	<ul class="ul1">
+		<li>orange</li>
+		<li>yellow</li>
+		<li> green</li>
+		<li> blue</li>
+	</ul>
+	
+
+	<script>
+
+		/*
+            select by id  :  $("#idName")
+
+            select by class  :  $(".className")
+
+            select by tag name  :  $("tagName")  => i.e $("h1") or $("p") etc
+
+
+
+            Advance selectors
+            
+            select all tags            :  $("*")
+
+            parent and child selector  :  $("ul li")
+
+            multiples classes          :  $(".abc,.xyz,.ab,....")
+
+            multiples tag              :  $("h1,div,p,h3,......")
+
+            pseudo classes             :  $("p:first,p:last")
+
+            pseudo classes             :  $("li:even,li:odd")
+
+
+		*/
+		$(document).ready(function() {
+
+			$(".ul1").css("background","red"); //single css property
+
+
+			$("p").css({
+			     "font-size":"30px","border":"1px solid green"
+			     })  //multple css property
+
+
+			$("ul li").css({"font-style":"italic","listStyle":"none"});
+
+			$("ul li:first").css("border","5px solid yellow")
+
+
+		});
+
+		
+	</script>
+</body>
+</html>

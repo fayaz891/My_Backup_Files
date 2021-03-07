@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#header{background-color: lightblue;}
+			#nav{background-color: lightcyan;}
+		</style>
+		
+	</head>
+	<body>
+		<header id="header" class="">
+			<h1>DOM value Get Methods</h1> 
+		</header>
+		<nav id="nav" class="abcd" style="border:1px solid red;" onclick="xyz()">
+			<ul>
+				<li  style="display: inline;"><a href="" title="">home</a></li>
+				<li style="display: inline;"><a href="" title="">gallery</a></li>
+				
+			</ul>
+		</nav>
+<div>we can get with DOM these 3 things
+			1)HTML
+			2)Text
+			3)Attribute
+			
+			Methods of Get
+			1) innerText(it helps to get text)
+			2) innerHTML(it  helps to get HTML)
+			3)getAttribute
+			4)getAttributeNode
+		5)Attributes
+</div>
+
+<script>
+	  //DOM value get
+
+    //innertext  it provides all innertext in header
+	var a;
+	a=document.getElementById("header").innerText;
+	console.log(a);
+
+
+ 
+    //innerHTML  it provides all html tags
+	var b;
+	b=document.getElementById("nav").innerHTML;
+	console.log(b);
+
+
+    //getAtrribute  it provide attribute i.e id,class,style,onClick etc
+     var c;
+	c=document.getElementById("nav").getAttribute("style");
+	console.log(c); 
+
+
+   //getAttributeNode  it provides attribut name and its properties, it is same as get attribute
+    var d;
+	d=document.getElementById("nav").getAttributeNode("style");
+	console.log(d);
+
+
+    //Attributes  IT POVIDES all attributes in the form of array
+
+    var d;
+	d=document.getElementById("nav").attributes;
+	console.log(d);
+
+   
+     var d;
+	d=document.getElementById("nav").attributes[2].value;
+	console.log(d);
+
+    var d;
+	d=document.getElementById("nav").attributes[2].name;
+	console.log(d);
+
+
+
+
+
+</script>
+
+	</body>
+</html>

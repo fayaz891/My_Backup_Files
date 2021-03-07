@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+  //filter method() finction. search every value and print all those values which pass a condition and make a new array
+
+  var a=[25,34,45,15,76,45,85,23];
+  var b=a.filter(passed_value);
+
+  function passed_value (values) { return(values>=30);}
+
+      document.write(b);
+     document.write("<br>");
+
+
+   
+  //toString() function. if change the whole array into string(then no array functions are applied on that string)
+    var a=[25,34,45,15,76,45,85,23];
+
+    a.toString();
+
+    document.write(a);
+    document.write("<br>");
+
+  //fill() function. this function change all values ,it is not used almost
+
+var a=[25,34,45,15,76,45,85,23];
+var b=a.fill("fayaz");
+
+document.write(b);
+
+
+//map() function is used to change in existance var i.e if we want to multiply each value with 10 
+var a=[22,33,44,55];
+
+var b=a.map(ab);
+
+document.write(b);
+
+	function ab (/*new variable*/abc) {
+	 return abc*10}
+
+document.write("<br><br><br><br>");	
+
+
+var a=[
+        {name:"fayaz",rollno:36},
+        {name:"majid",rollno:30},
+        {name:"farooq",rollno:16}
+                                  ]
+var b=a.map(c);
+function c (x) {
+	return x.name + " "+x.rollno }
+document.write(b);	
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

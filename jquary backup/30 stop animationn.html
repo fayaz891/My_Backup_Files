@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;
+		    position: relative;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button class="ani">animate</button>
+	<button class="stop">stop</button>
+
+	<script>
+/*
+		stop()  =>we can stop animation without complete to its target position
+
+		*/
+
+		$(document).ready(function() {
+			$(".ani").click(function () {
+				$(".abc").animate({left:"550px"},3000);
+				$(".abc").animate({fontSize:"25px"},3000);
+			});
+
+			$(".stop").click(function () {
+				$(".abc").stop();      //parameters  stop(true) ,all animation stop on single click
+				                                        //stop(true,true) animation direct to end point
+			});
+		});
+	</script>
+</body>
+</html>

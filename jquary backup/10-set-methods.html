@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.red{color: red;}
+		#font{font-size: 20px;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button type="button" id="btn"> greeting</button>
+	<button type="button" id="btn1"> Full name</button>
+	<button type="button" id="btn2"> color</button><br><br>
+
+	<form id="form1">
+  	<input type="text" placeholder="name" id="name">
+  	
+  	<input type="password" placeholder="password" id="pswrd">
+  	<input type="submit" value="submit" id="sub">
+  </form>
+
+	<script>
+
+		/*
+		set methods
+		1) text()
+		2) html()
+		3) attr()  //attr("class/id/anySelector , name of class/id/anySelector")
+		4) val()
+
+		*/
+		$(document).ready(function() {
+			$("#btn").click(function () {
+				let a="Hello Fayaz rashid"
+				$("h2").text(a)
+			});
+
+		$("#btn1").click(function () {
+				$(".abc").html("<h1>FAYAZ RASHID</h1><h2>fayaz</h2><p>the quick fox kjumps</p>")
+			});
+
+			$("#btn2").click(function () {
+				$(".abc p").attr("class","red")
+			});	
+
+			
+				$("#name").val("fayaz");
+
+				$("#pswrd").val("123465");
+			
+
+
+
+
+		});
+	</script>
+</body>
+</html>

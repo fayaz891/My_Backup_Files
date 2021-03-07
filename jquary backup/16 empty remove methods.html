@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="abc" style="background:red;">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button id="remove">remove</button>
+	<button id="empty">empty</button>
+
+	<script>
+
+		/*remove()  =>it remove the something which is even not found in html code
+
+		  empty()  => it make empty something not the whole tag
+
+		*/
+
+		$(document).ready(function() {
+			$("#remove").click(function () {
+				$(".abc").remove();
+			});
+
+			$("#empty").click(function () {
+				$(".abc h2").empty();
+			});
+			
+		});
+	</script>
+</body>
+</html>

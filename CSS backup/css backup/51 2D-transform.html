@@ -1,0 +1,121 @@
+<html>
+<head>
+<style>
+
+.p1{border:1px solid black;
+     background:red;
+	 margin-bottom:20px;
+	 margin:50px auto;
+	 width:70px;
+	 height:70px;
+	 
+	 transform:rotate(-30deg);
+	 
+	 transform:skewX(30deg);
+	 transform:skewY(40deg);	 
+	 }	
+		   
+	
+.p2{border:1px solid black;
+    margin-bottom:20px;
+	margin:50px auto;
+     background:pink;
+	 width:70px;
+	 height:70px;
+	 
+	 transform:rotate(-30deg);
+	 transform:skew(30deg,40deg);
+	 transform:translate(70px,40px);
+	 transform:scaleX(2);
+	 transform:scaleY(0.5);
+	 
+	 transform:scale(2);
+	 
+	}
+	
+
+.p3{border:1px solid black;
+    margin-bottom:20px;
+	margin:50px auto;
+     background:yellow;
+	 width:70px;
+	 height:70px;
+	
+transform:rotate(0deg);
+	 transform-origin(center,center);
+	 transform:translate(0px,0px);
+	 
+	 transition:transform 2s;
+	 }
+.p3:hover{transform:rotate(30deg);
+       transform-origin(10%,10%);
+       transform:translate(30px,40px);	   	
+	 }
+		   
+.p4{border:1px solid black;
+    margin-bottom:20px;
+	margin:50px auto;
+     background:green;
+	 width:70px;
+	 height:70px;
+	 
+     transform:rotate(0deg) scale(2) skew(10deg);
+	 
+	 
+	 transition:transform 2s;
+	 }
+.p4:hover{transform:rotate(30deg) scale(1) skew(30deg);   
+          }	 
+		   
+</style>
+</head>
+
+<body>
+transform:Rotate(30deg)  </br>
+</br>
+ trnasform-origin:left top;</br>
+ trnasform-origin:left bottom;</br>
+ trnasform-origin:right top;</br>
+ trnasform-origin:right bottom;</br>
+ </br>
+ trnasform-origin:20% 40%;</br>
+ trnasform-origin:50% 50%;</br>
+ </br></br>
+
+transform:translateX(x)</br>
+transform:translateY(y)</br>
+
+transform:translate(x,y)</br>
+</br>
+transform:scaleX(x)</br>
+transform:scaleY(y)</br>
+
+transform:scale(x,y)</br>
+</br>
+transform:skewX(angle)</br>
+transform:skewY(angle)</br>
+
+transform:skew(x-angle,y-angle)</br>
+</br>
+transform:matrix()</br>
+transform:none </br>
+</br>
+matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+</br>
+matrix is used of short hands of all properties and it is almost not used proffesionally
+</br></br></br>
+using Transform:translate and transform:scale the skew and rotate failed their value and does not worked
+
+
+<div class="p1">fayaz</div>
+
+
+<div class="p2">A</div>
+
+<div class="p3">A</div>
+
+<div class="p4">A</div>
+
+
+</body>
+</html>

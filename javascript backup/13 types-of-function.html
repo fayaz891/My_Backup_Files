@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+
+    <script>
+
+    //function expression,
+    // a function assign in variables called function expression
+
+    var ab=function abc () {
+   	document.write("fayaz");
+    };
+    ab();
+
+
+
+
+     //anonymous function, 
+     //a function without name called anonymous function
+    var a= function (x,y) {
+     	document.write(x+y);
+     };
+    a(20,30);
+
+
+    document.write("<br>");
+
+
+    //passing anonymous 
+    //function as an arguments, first general function
+    function abc(xyz) {
+    return xyz;
+    }
+    document.write(abc("fayaz"));
+    document.write("<br>");
+
+
+
+    //now passing anonymous function, in return (abc) is an argument, but this argument is function thats why we add paranthesis i.e abc()
+    
+    function disp (abc) {
+        return abc();
+        }    
+    document.write(disp ( function () {
+    	return "inner function";
+    } ));
+
+
+document.write("<br>");
+
+
+    
+    //returning anonymous function
+    function cd (a) {
+    	return function (b) {
+    		return a + b;
+    	} 
+    }
+    var ab=(cd(100));
+    document.write(ab(20));
+
+
+
+document.write("<br>");
+
+
+    
+    //Arrow function
+   // ()=>{statment};
+
+  var s=() =>{document.write("fayaz");};
+
+    s();
+
+  //with parameters
+  var p=(a,b,c) => {document.write(a+b+c);};
+  p(23,45,66); 
+
+  //or
+
+  var w=(a,b,c)=>a+b+c;
+  p(20,30,40);
+
+  var a=(y)=>{return y};
+  document.write(a("fayay"));
+
+  var a=(y)=>y;
+  document.write(a("hamad"));
+
+
+  //arrow with default parameters
+  var f=(a,b=44)=>{document.write(a+b)};
+  f(55);
+
+  //arrow with rest parameters
+  var e=(a,...args)=>{document.write(a+args)};
+  e(20,30,45,556);
+
+
+
+
+
+
+//imediately invoked function expression (IIFE)
+//it runs there as it defined,it is self exicute
+ (function (a,b) {document.write(a+b);} (25,33));
+
+ (function (a,b) {document.write(a+b);} ("fyx","fyz"));
+
+
+
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<audio src="audio.mp3" controls autoplay loop> 
+audio element does not supported by your browser
+</audio>
+
+<audio src="audio.mp3" autobuffer autoloop loop controls muted="muted" preload="auto"></audio>
+
+
+2nd way
+
+<audio controls>
+<source src="audio.mp3" type="audio/mpeg">
+<source src="audio.ogg" type="audio/ogg">
+audio element does not supported by your browser
+</audio>
+
+
+
+
+
+<video src="" autobuffer autoloop loop controls height="200" width="300" muted="" preload="none" poster="/images/video.png"></video>
+
+
+<video controls autoplay loop>
+<source src="video.mp4" type="video/mp4">
+<source src="video.ogg" type="video/ogg">
+video is not supported by your browser
+</video>
+
+if the browser does not support the first video type it will try the next one
+
+
+
+</body>
+</html>

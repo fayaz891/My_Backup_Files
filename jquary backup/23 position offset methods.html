@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<div class="ab">
+		using offset() we can set position of any div
+	</div>
+
+	<button class="position">position</button>
+	<button class="offset">offset</button>
+
+	<script>
+
+		/*
+		position()   =>to get positin(location) of tag (i.e div) (from top??,from left??)
+		offset()    =>get position of contents includ padding etc
+		        using offset() we can also set positions of tags
+
+		position()   relative to its parent element,if parent div position is relative
+		offset()     relative to the document
+
+		*/
+
+		$(document).ready(function() {
+			$(".position").click(function () {
+			 console.log($(".abc").position());
+			 console.log($(".abc p").position()); 
+
+			 //if we want to get seperate position values of top and left then
+			 var x=$(".abc h2").position();
+			 console.log("top =" + x.top + "  left =" + x.left);
+			});
+
+
+
+
+
+			$(".offset").click(function () {
+			 console.log($(".abc").offset());
+			 console.log($(".abc p").offset()); 
+
+			 //if we want to get seperate offset values of top and left then
+			 var x=$(".abc h2").offset();
+			 console.log("top =" + x.top + "  left =" + x.left);
+
+			 //set position of .ab
+			 $(".ab").offset({top:150,left:200});
+			});
+		});
+	</script>
+</body>
+</html>

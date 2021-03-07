@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>autocomplete</h2>
+	autocomplete On automatically complete values which entered before,while Off requird fill form each time
+
+	<form autocomplete="on">
+
+		Name:<input type="text" name="" value="" placeholder="">
+		
+		password:<input type="password" autocomplete="off">
+
+        <button><input type="submit" name="" value="submit"></button>
+	</form>
+
+
+	<h2>method get/post</h2>
+	it spacifies how to sent form data to the server<br>
+
+	get method:data sent as a part of url,
+	           if you have passwrd or other sensitive informatio get method never use,it show your info in url
+	           it has size limitation,
+	           in get method images,documents etc never sent,
+	           it is by default method
+
+	post method:data sent as A message body,
+                it dont hv any restriction on size,
+                it can be sent images etc,
+                your data will more secure,
+
+
+
+  <form action="" method="GET">
+ 
+   name:<input type="text">
+   password:<input type="password">
+   <input type="submit"value="submit">
+  </form>
+
+  <form action="" method="POST">
+ 
+   name:<input type="text">
+   password:<input type="password">
+   <input type="submit"value="submit">
+  </form>
+
+  <h2>formmethod</h2>
+  spacifies the each input which overwrite the above form method attribute
+
+  <form action="" method="POST">
+   name:<input type="text">
+   password:<input type="password" formmethod="GET">
+   <input type="submit"value="submit">
+  </form>
+
+
+
+<h2>enctype attribute</h2>
+spacifies how the browser encodes the data before sent(converted to special characters)
+using enctype multiprt/form-data you can take input of files or upload
+  <form enctype="multipart/form-data">
+  	 name:<input type="text">
+  	 file:<input type="file">
+  	 <input type="submit"value="submit">
+  </form>
+
+ <h2>formenctype</h2>
+ spacifies one input that how the form-data should be encodedwhen submitting to server
+ <form enctype="application/x-www-form-urlencoded">
+  	 name:<input type="text" formenctype="text/plain">
+  	 file:<input type="file">
+  	 <input type="submit"value="submit">
+  </form>
+
+
+<h2>required attribute</h2>
+<form action="" method="get">
+  	 name:<input type="text" required="required">
+  	 password:<input type="password" required>
+  	 city:<input type="text">
+  	 <input type="submit"value="submit">
+  </form>
+
+
+
+<h2>Novalidate</h2>
+whole form does not required to fill all 
+<form novalidate method="get">
+  	 name:<input type="text" required="required">
+  	 password:<input type="password">
+  	 city:<input type="text" required>
+  	 <input type="submit"value="submit">
+  </form>
+
+<h2>formnovalidate</h2>
+only a particular input make novalidate
+<form method="get">
+  	 name:<input type="text" required="required">
+  	 password:<input type="password">
+  	 city:<input type="text">
+  	 <input type="submit"value="submit" formnovalidate>
+  </form>
+
+
+<h2>accept attribute</h2>
+spacify the type of files which server accept<br>
+values:file.extension(file.pdf),audio/* ,video/*, image/*(all type image), media type<br>
+it is apply only on type="files"
+<form method="get">
+  	 name:<input type="text" required="required">
+  	 password:<input type="password">
+  	 upload file:<input type="text">
+  	 <input type="submit"value="file" accept="image/*" >
+  </form>
+
+  <h2>action attribute</h2>
+  it contain url that define where to send data after submitting form,by default it saved in current page and action attributes give path or redirected to save there
+  <form action="page.html" method="get">
+  	name:<input type="text" required="required">
+  	 password:<input type="password">
+  	 <input type="submit" value="submit">
+  </form>
+
+  <h2>formaction attributes</h2>
+  an input which we need to submit by others(i.e adm submitd), by default user submitted thier input,if we want to submit one nput by admn then use this attribute which redirected to admn.html page
+  <form action="page.html">
+  name:<input type="text">
+  password:<input type="text">
+  city:<input type="text" formaction="admn.html">
+
+  <input type="submit" value="submit">
+  </form>
+
+
+
+
+
+
+  <h2>autofocus</h2>
+  spacify that input automatically get focus after loads page
+  <form >
+  	name:<input type="text" required="required">
+  	 password:<input type="password" autofocus>
+  </form>
+
+  <h2>dirname</h2>
+  it is not used generlly
+  it spacifies the text direction will be submitted<br>
+  its shows :ltr,rtl,auto<br>
+  ltr=left to right,rtl=right to left
+  <form >
+  	name:<input type="text" name="abc" dirname="abc.dir">
+  	 password:<input type="password">
+  </form>
+
+  <h2>disabled</h2>
+  disabled is used for the visiter does not input anythings in the input element
+  <form >
+  	name:<input type="text" disabled>
+  	 password:<input type="password">
+  </form>
+
+
+<h2>form attributes</h2>
+   when user input data in one form and in other form automatically filled,it is associated with form attribute, the pasword is worked for form2 too bc associated it with form attribute
+   <form id="form1" >
+  	name:<input type="text">
+  	 password:<input type="password" form="form2">
+   </form>
+   <form id="form2" >
+  	name:<input type="text">
+  	city:<input type="text">
+  	<input type="submit" value="submit">
+   </form>
+
+   <input type="text" form="form1">
+
+<h2>target atribute</h2>
+spacifies the target of the address in the action attribute
+<form action="user.html" target="_blank" method="POST">
+ 
+   name:<input type="text">
+   password:<input type="password">
+   <input type="submit"value="submit">
+  </form>
+
+<h2>formtarget</h2>
+spacifies where to display response after submiting
+<form action="user.html" target="_blank">
+ 
+   name:<input type="text">
+   password:<input type="password">
+   <input type="submit"value="submit" formtarget="_self">
+  </form>
+
+
+</body>
+</html>

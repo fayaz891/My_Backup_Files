@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+
+    <script>
+    	//function with parameters
+   function fayaz (ab,bc) {
+   	document.write(ab,bc+"<br>")
+   }
+
+   fayaz("Good","Best");
+   fayaz("Bad","Better");
+
+
+
+
+   //function of arguments object
+
+   function fyz () {
+   	document.write(arguments[0],arguments[1]);
+   
+   	document.write("<br>");
+
+   }
+fyz(23,24,25)
+
+
+
+
+//too many function arguments
+function a (b,c) {
+ document.write(b,c,arguments[2],arguments[3]);
+}
+a("too","many","function","arguments")
+
+
+
+
+
+//argument length
+   function fayaz1 () {
+   	document.write(arguments.length+"<br>");
+   }
+   fayaz1("fayaz","hamad","zafar")
+   fayaz1("abc","bcd","cde","wer")
+   fayaz1("abc","bcd","cde","wer")
+
+
+
+//callee, knowlwdge obout function
+function faya () {
+   	document.write(arguments.callee);
+   }
+faya(77,66)
+
+
+//change an argument
+   function fz () {
+
+   	arguments[0]="fayaz";
+
+   	document.write(arguments[0]);
+   	document.write(arguments[1]);
+   	document.write(arguments[2]);
+    }
+
+  fz(44,55,66);
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+/*-------------variable start-----------*/
+
+@import "variables";
+
+h1,h2,h3{color:$maincolor;}
+
+p{font-size:$fontsize;
+  font-family:$fontfamily;}
+
+/*-------------variable end-----------*/
+
+/*-------------nesting start-----------*/
+nav {
+    ul{
+        border:1px solid green;
+    li {padding:5px;
+
+        a{background-color: greenyellow;
+        
+          &:hover{text-decoration: line-through;}}
+        .a2{color: hotpink;}
+       }
+     }
+
+   }
+
+/*-------------nesting end-----------*/
+
+/*-------------partial and imports start-----------*/
+ 
+/*on the top i  imported variable part in main/this file, 1st i make a _variable part and then imported in this file
+import each file in sequence other wise erorr may be happening
+*/
+
+/*-------------partial and imports end-----------*/
+
+
+/*-------------Maxins start-----------*/
+//without variable
+@mixin radius() {
+    -webkit-border: 1px solid blue;
+    -moz-border: 1px solid blue;
+     border: 1px solid blue;
+
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+}
+
+
+.mixin1{font-style: inherit;
+        font-weight: 500;
+        @include radius();}
+
+.mixin2{background-color: ivory;
+        @include radius();}
+
+   //with parameters
+   @mixin stuff($width , $height , $color , $border) {          //making variables
+       width: $width;
+       height: $height;
+       color: $color;
+       border: $border;
+   }
+   .mixin3{font-size: 18px;
+           @include stuff(600px,100px,red ,2px dotted green);}
+
+   .mixin4{@include stuff(800px,50px,rgb(75, 75, 5) ,2px dotted blue);}     
+
+
+/*-------------Maxins end-----------*/
+
+
+/*-------------extand start-----------*/
+.fyz{color:rgb(97, 71, 5);
+     font-weight: 600;
+    text-transform: capitalize;
+    background-color: rgb(190, 201, 204);
+    border: 2px solid black;
+    padding: 5px;}
+
+.fy{color: indigo;
+    @extend .fyz;}
+    
+.fz{color: rgb(48, 90, 7);
+    @extend .fyz;}    
+
+/*-------------extand end-----------*/
+
+
+
+/*-------------oprators start-----------*/
+$variable1 : 10;
+$variable2 : 2;
+
+.test{padding: $variable1+px;} //concatination sign
+
+.test1{padding: $variable1+$variable2+px;} //1st + is used for addition and 2nd + is used for concatination
+
+
+/*-------------oprater end-----------*/
+
+
+
+
+/*-------------interpolation start-----------*/
+
+//concatination in property
+@mixin margin($position,$unit) {
+    margin-#{$position}:$unit + px;
+}
+
+.interp{@include margin(right,20);
+      @include margin(bottom,10);
+       }
+
+ //concatination in selecter
+ @mixin icon($name) {
+     .icon#{$name}{background-color:greenyellow;}
+ }      
+
+
+ @include icon(duck);
+
+/*-------------interpolation end-----------*/
+
+
+/*-------------function start-----------*/
+
+//variable
+$continer-width : 1000;
+
+//function
+@function half($width2){
+
+    @return $width2/2 + px;}
+
+@function one-third($width2){
+
+    @return $width2/3 + px;}
+
+//selector
+.abcd { width:half($continer-width);}
+.abcde {width:one-third($continer-width);}
+
+/*-------------function end-----------*/
+
+/*-----------number functions---------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

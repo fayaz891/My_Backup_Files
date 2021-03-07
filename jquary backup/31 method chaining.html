@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.abc{width: 400px;
+		    height: 200px;
+		    background-color: green;}
+	</style>
+</head>
+<body>
+	<div class="abc">
+	<h2>fayaz</h2>
+	<p>the quick fox jump over the lazy dog</p>
+	</div>
+
+	<button class="ab">btn1</button>
+	<button class="a">btn2</button>
+
+
+	<script>
+
+		/*
+		method chaining
+
+		$("#box").css("background","red");
+		$("#box").slideUp();
+		$("#box").slideDown();
+
+		method chaining is
+		$("#box").css("background","red").slideUp().slideDown()
+		*/
+
+		$(document).ready(function() {
+			$(".ab").click(function () {
+				$(".abc").css("background","red");
+				$(".abc").slideUp();
+				$(".abc").slideDown();
+			});
+
+			$(".a").click(function () {
+				$(".abc").css("background","red").slideUp(2000).slideDown(2000);
+			})
+
+
+		});
+	</script>
+</body>
+</html>

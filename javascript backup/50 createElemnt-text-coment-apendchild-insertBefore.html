@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+	<div id="outer">
+
+      <h1>Fayaz rashid</h1>
+      we are going to peshawar
+
+	</div>
+	 
+
+
+
+	<script>
+	/*creat methods
+
+	1) createElement
+	2) createTextNode
+	3) createComment    
+
+
+	if we want to create a tag with the help of javascript we use createElement
+
+	if we to create or write some text by using javascript then use createTextNode
+
+	if we want to comment something in html or writing a comment by using javascript then use createComment    */
+
+
+
+
+	//createElement
+	
+	var a=document.createElement("p")
+	console.log(a);	
+
+	var a=document.createElement("h2")
+	console.log(a);
+
+
+	//createtextNode
+	var a=document.createTextNode("whats going on")
+	console.log(a);	
+
+    //createComment
+    var a=document.createComment("comment something")
+	console.log(a);	
+
+
+
+
+	//appendChild, it is used to attached textNode with Element
+	var a=document.createElement("p")
+        b=document.createTextNode("whats going on")
+
+	a.appendChild(b);
+    
+    console.log(a);
+
+    document.getElementById("outer").appendChild(a);
+
+    //createComment, comment is shown in coding only
+    var a=document.createComment("THIS IS COMMENT")
+
+    document.getElementById("outer").appendChild(a);
+
+
+
+
+
+    //appendChiled append anything at the end of div
+    //if we want to append it in first or middle or a the end then use 
+
+    //insertBefore
+
+    //insertBefore(insertedElement , position where inserted)
+    
+    var newelement=document.createElement("h2")
+        newtext=document.createTextNode("whats going on")
+
+	newelement.appendChild(newtext);
+
+	var target=document.getElementById("outer");
+
+     target.insertBefore(newelement,target.children[0]);
+  
+    
+
+     var newelement=document.createElement("h2")
+        newtext=document.createTextNode("2nd test property")
+
+	newelement.appendChild(newtext);
+
+	var target=document.getElementById("outer");
+
+     target.insertBefore(newelement,target.children[2]);
+
+
+
+
+
+
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+
+    <script>
+   //factory function ,it is a functon which return an object, we can create multiple object instance
+
+   function Mobile () {
+     return{ model:3110,
+             color:"white",
+             price:function () {
+             	return "Rs 3000";
+             }}
+   }
+ 
+ var samsung = Mobile();
+ 
+ 
+
+ //document.write(samsung.model+"<br>"+samsung.price()+"<br>");
+ 
+
+ //due to fctory function we cannot repeat the codes in object, we can access it by an object name with method(i.e sumsung.model,nokia.color) and write
+
+
+//factory function
+function Mobile (model_no){
+                 return{model:model_no,
+                 	price:function () {
+                 		return "Price=25000"
+                 	}
+                                    }
+
+}
+
+//making object instance
+var sumsung=Mobile("galaxy");
+var nokia= Mobile("3310");
+var oppo=Mobile("F11");
+
+document.write(sumsung.model +sumsung.price()+"<br>");
+document.write(nokia.model +nokia.price()+"<br>");
+document.write(oppo.model +oppo.price()+"<br>");
+
+
+
+
+
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<form action="" id="sform">
+		<label for="name">Name</label>
+		<input type="text" id="name" placeholder="name"><br><br>
+		
+		<label for="email">emai</label>
+		<input type="email" id="email" placeholder="email"><br><br>
+        
+        <label for="select">country</label>
+		<select id="select">
+			<option value="">Pakistan</option>
+			<option value="">india</option>
+			<option value="">bangldesh</option>
+			
+		</select><br><br>
+
+      <input type="submit" name="" value="submit">
+	</form>
+	
+	<div id="fayaz" style="background-color: green;">  </div>
+
+	<script>
+
+     /*
+        form events
+        1) focus()
+        2) blur()    =>leave input(oposit of focus)
+        3) change()
+        4) select()
+        5) submit()
+     */
+
+		$(document).ready(function() {
+			$("input,#select").focus(function () {
+				$(this).css("background","lime")
+			});
+
+            $("input,#select").blur(function () {
+				$(this).css("background","")
+			});
+
+			$("#select").change(function () {   //change() worked on select options only
+			    var a = $(this).val();
+			     $("#fayaz").html(a);
+			    //console.log(a);
+
+			});
+
+            $("input").select(function () {  //select() worked on input only,when select text it applyed
+				$(this).css("background","yellow")
+			});
+         
+
+           $("#sform").submit(function (e) {    //submit() worked on whole form only,but submit must be within form
+				alert("form submitted")
+				//when we submited form it will reload the whole page, thats why we use preventDefault() to reload only form not whole page
+
+				 e.preventDefault();
+			});
+          
+
+		});
+	</script>
+</body>
+</html>

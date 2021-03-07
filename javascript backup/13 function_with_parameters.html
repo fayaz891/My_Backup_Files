@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		
+/* 'fayaz' is a function name and 'name1' 'name2' are arguments or parameters,parameters are worked as a variables
+
+	in documents.write we will display arguments	
+	*/
+function fayaz (name1,name2) 
+{
+	document.write(name1 +" to " + name2 + "<br>");
+
+}
+
+fayaz(12,13);
+
+fayaz("done","well");
+
+fayaz("danger",true);
+
+
+
+
+//default parameters
+function abc (a,b,c="hamad") {
+	document.write(a,b,c+"<br>");
+}
+abc("fayaz",66);
+
+
+
+function add (a,b=[20,30]) {
+	document.write(a,b[1],b + "<br>")
+}
+add("fayaz");
+
+
+
+
+function acc (b=[10]) {
+	document.write(b) ;
+}
+acc([100]);
+//we cannot write [(100)],bc b is an array member and thats why write in [] 
+
+
+
+
+
+//rest parameters,it completely behaves as array while default parameter has only length property behaved
+function rest (...args) {
+	document.write(args);
+}
+rest(10,20,30,40,50);
+
+
+//any name we can given, as args or abcd or bccc etc
+
+function aee (a,...args) {
+	document.write(args);
+}
+aee(10,50,60,70);
+
+
+
+</script></head>
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

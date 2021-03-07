@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>max and min attributes</h2>
+  spacifies the maximum and minimum value for an input number,range,date,datetime-local,month,time and week<br>
+  its values are :number,date,length
+   <form >
+      number:<input type="number" min="5" max="15"><br><br>
+      range:<input type="range" min="18" max="40"><br><br>
+      date:<input type="date" min="2000-01-01" max="2020-01-01"><br><br><br><br>
+
+      name:<input type="text" maxlength="10"><br><br>
+      password:<input type="password" minlength="6" maxlength="8">
+      <input type="submit" value="submit">  
+  
+  </form>
+  <br><br><br><br>
+
+<h2>meter tag</h2>
+
+  <meter value="40" min="10" low="30" high="70" max="80" optimum="" form="">range</meter>
+<meter value="20" min="10" low="30" high="70" max="80" optimum="" form="">range</meter>
+<meter value="65" min="10" low="30" high="60" max="80" optimum="" form="">range</meter>
+<br><br><br><br>
+
+
+<h2>progress</h2>
+<progress value="80" max="100"></progress>
+
+
+<h2>size attributes</h2>
+spacifies the width of the control, its value is number
+<form >
+  name:<input type="text" size="20"><br><br>
+    password:<input type="password" size="6" >
+    <input type="submit" value="submit">
+</form>
+<br><br><br><br>
+
+
+
+
+<h2>placeholder</h2>
+spacifies the short hintthat described the expected value
+name:<input type="text" placeholder="enter your name"><br><br>
+    password:<input type="password" >
+    <input type="submit" value="submit">
+<br><br><br><br>
+
+
+
+
+   <h2>readonly</h2>
+   it is used that user cant modified a field
+   <form>
+    name:<input type="text" value="fayaz" readonly><br><br>
+    password:<input type="password" >
+    <input type="submit" value="submit"> 
+   </form> 
+<br><br><br><br>
+
+
+
+
+
+   <h2>multiple</h2>
+   it allows that user enter more then one value
+   
+   <form>
+    file:<input type="file" multiple><br><br>
+    email:<input type="email" name="email" multiple>
+    <input type="submit" value="submit"> 
+   </form> 
+<br><br><br><br>
+
+
+
+
+   <h2>step attribute</h2>
+   spacifies the legal nmbr interval for input field,
+   it is used with nmbr,time,date etc
+  <form>
+    number:<input type="number" step="4"><br><br>
+    time:<input type="time" step="2">
+    <input type="submit" value="submit"> 
+   </form>
+<br><br><br><br>
+
+
+
+
+ <h2>pattern and title</h2>
+ it spacifies a regular expression that the input value is cheked against,it used input character(i.e abc,123)<br>
+ how user know to enter correct characters,thats why used title
+
+ <form>
+   <input type="text" pattern="^[a-z]+$" title="example:abcde">
+   <input type="submit" >
+ </form>
+<br><br>
+
+
+
+
+
+
+
+
+<h2>textarea</h2>
+it is multiline text field,user enter unlimited nmbr of characters
+cols:width of textarea<br>
+rows:nmbr of lines of text area
+
+<form>
+  comments:<textarea name="comment1" rows="9" cols="30" wrap="hard">this is for comment</textarea>
+  <br>
+   <input type="submit" >
+ </form>
+<br><br><br><br>
+
+
+
+
+ <h2>label</h2>
+ it defines a set of text which associated with particular element
+
+<form>
+  <label for="">Male:<input type="radio" name="status"></label>
+
+  <label for="">FeMale:<input type="radio" name="status"></label>
+
+
+</form>
+
+<h4>for attribut</h4>
+ spacify which form element label is bound for="element-id" as form="form-id"<br>
+<label for="male">male</label>
+   <input type="radio" name="status" id="male">
+<label for="female">female</label>
+   <input type="radio" name="status" id="female">
+ <br><br><br><br>
+
+
+
+
+<h2>fieldset and lagend</h2>
+it creates a box for form<br>
+values :disabled,form-id,text
+<form>
+
+<fieldset>
+  <legend>application form</legend>
+  Nmae:    <input type="text" name="fname" ><br>
+  Password:<input type="password" name="password" ><br>
+  city:    <input type="text" name="city" ><br>
+</fieldset>
+<br><br><br><br>
+
+
+
+
+
+
+<h2>select and option tag</h2>
+it creates adropdown list to accept a user input form a list of items<br>
+select tag define an option in dropdown list<br>
+attributes=disabled:disabled, label:text, selected:selected, value:text
+<form>
+  Name:<input type="text" name=""><br><br>
+
+ Course: <select name="" required multiple autofocus size="2">
+        <option value="">None </option>
+        <option value="java">Java programming</option>
+        <option value="C" disabled>C programing</option>
+        <option value="Javascript" label="javascript">JS</option>
+        <option value="CSS" selected>CSS </option>
+        <option value="CSS" >HTML </option> 
+   </select><br>
+   <input type="submit" value="submit">
+</form>
+
+</form>
+<br><br><br>
+
+
+<h2>optgroup</h2>
+if long list of option to select dropdwon list<br>
+
+other course:<select name="">
+  <optgroup label="programming">
+      <option value="jv">js</option>
+      <option value="html">html</option>
+      <option value="css">css</option>
+  </optgroup>
+
+  <optgroup label="web designing">
+      <option value="jv">js</option>
+      <option value="html">html</option>
+      <option value="css">css</option>
+  </optgroup>
+
+  <optgroup label="3nd group" disabled>
+  <option value="js">js</option>
+  <option value="html">html</option>
+  <option value="css">css</option>
+  </optgroup>
+</select>
+<br><br><br>
+
+
+
+
+
+<h2>button tag</h2>
+its attributes are autoficus,sisabled,form,formactio etc<br>
+other main attributes are name,type:button reset submit, value:text
+<br>
+<button name="fayaz" type="submit" value="java">submit</button>
+<br><br><br>
+
+
+<h2>datalist</h2>
+it allows you select input from predefined options<br>
+
+<form>
+  <input type="text" list="universities">
+  <datalist id="universities">
+    <option value="BACHAKHAN UNIVERSITY"></option>
+    <option value="peshawar university"></option>
+    <option value="bahria university"></option>
+    <option value="abdulwalikhan university"></option>
+  </datalist>
+</form>
+<br><br><br>
+
+
+
+</body>
+</html>

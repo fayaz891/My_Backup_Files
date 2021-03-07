@@ -1,0 +1,116 @@
+<html>
+<head><title>Basic layout</title>
+<style>
+
+:root{ --abc:brown;
+      --font:arial;
+	  --p-font:verdana;}
+
+
+body{font-family:arial,helvetica;
+     background-color:slategray;
+	 margin:0px;
+	 padding:0px;}
+
+
+#wrapper{border:1px solid black;
+         width:990px;
+		 margin:0px auto;
+		 background-color:#f2f2f2;
+		 }
+		 
+#header{border:1px solid black;
+
+		 background:var(--abc);
+		 
+		 color:white;
+		 }
+#header h1{padding:30px 40px;}
+		 
+
+#manu{background-color:lightsalmon;}
+
+#manu li{display:inline-block;}
+
+#manu li a{display:block;
+          padding:5px 10px;
+		  
+		  text-decoration:none;
+		  color:black;}
+		  
+#manu li a:hover{background:var(--abc);
+
+                 color:white;}
+		  
+#manu ul{margin:0px;
+         padding:0px;}
+
+#content{background-color:var(--abc);
+
+        font-family:var(--p-font);
+		
+         width:800px;
+		 float:left;
+		 min-height:400px;
+		 
+		 padding:10px;
+		 box-sizing:border-box;}
+
+#sidebar{ --color:yellow;
+         
+         background-color:var(--color);
+		 
+		 
+		 
+          width:190px;
+		  float:left;
+		  min-height:400px;
+		}
+		#sidebar a{text-decoration:none;
+		  color:blue;}
+
+#footer{background-color:lightsalmon;
+        clear:both;
+		padding:10px 5px;
+		text-align:right;
+		
+		font-family:var(--font);}
+		 
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"><h1>Basic layout</h1></div>
+<div id="manu"><ul>
+<li> <a href="1">Home</a></li>
+<li> <a href="1">Gallery</a></li>
+<li> <a href="1">Contact Us</a></li>
+<li> <a href="1">About Us</a></li>
+<li> <a href="1">sign Up</a></li>
+</ul>
+</div>
+
+
+<div id="content">
+<h2>Basic layout</h2>
+
+<p>when we will start css of a page we will start 1st of all body tag css.
+
+root variables is global 
+local var is used in a spacific tag
+</p>
+</div>
+
+<div id="sidebar">
+<ul>
+<li> <a href="1">Home</a></li>
+<li> <a href="1">Gallery</a></li>
+<li> <a href="1">Contact Us</a></li>
+<li> <a href="1">About Us</a></li>
+<li> <a href="1">sign Up</a></li>
+</ul></div>
+
+<div id="footer">fayazrashid@copyright 2020</div>
+</div>
+</body>
+</html>

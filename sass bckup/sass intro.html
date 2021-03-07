@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SASS and SCSS</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Koala convert SASS file into CSS</h1>
+
+	<p>you dont change or do any thing in css file other wise it will remove whole file of scss,you will need tol close css file and make all chnges in scss file which will automatically converrted into css in koala software</p>
+
+
+	<h2>Main features of SASS</h2>
+
+<!-- variables -->
+	<h3>Variables</h3>
+	<p>variable need to start with $ dollar sign i.e = $primery-color:red;</p>
+	<p> in variables we store a value of properrty<br> i.e $ab:red; <br> in this ab is a vriable name which will use for red color<br> example  body{bgcolor:ab;}  ,h1{color:ab;} ,span{color:ab;}<br>
+		it helps if we want to change color  of these having same value, we dont need to change in all these , we will change only viraible value and change happen in all these tags
+
+	</p>
+	<!-- variable end -->
+
+	<!-- nesting start-->
+	<h3>Sass nesting</h3>
+	<nav>
+		<ul><p>nesting means that we dont need nav and ul for every li tag or class ,id etc<br>
+		if we want to make hover efect on anchor we use (&:hover) within anchor as you seen in sass file</p>
+			<li><a href="#">home</a></li>
+			<li><a href="#" class="a2">gallery</a></li>
+			<li><a href="#">contact</a></li>
+		</ul>
+	</nav>
+	<!-- nesting end -->
+
+	<!-- partial and imports start -->
+<h3>partials and import</h3>
+<p>partial means part, it means that we can make seperte files of each section i.e header,footer,main content etc .each section have each file, also for variables etc can make each file in scss, which help to easy understand and easy approch to each file</p>
+<p>then we will import each file i.e @import "header" , @import "footer" , @import "maincontent etc in main.scss, but _ is not given in main.scss. these file are in scss not in css form"</p>
+<p>to make each file we use "_" before file name i.e _header.scss, _footer.scss etc which scss know it that its not main file, then after import it will automatically move to the main.scss file</p>
+<p>now i will make each section for each, for variable i will make seperate fle and then import it within main file, from main file i will remove variables </p>
+
+	 <!-- partial and imports end -->
+
+  
+	<!-- sass mixins start -->
+	<h3>sass mixins</h3>
+	<p class="mixin1">mixins is used for short of code,it works like functions. i.e we can write different code for each browser i.e -webkit-border-radius:5px,-moz-border-radius:5px,border-radius:5px.  if we use mixins we cannot repead code for different browsers</p>
+	<p class="mixin2">example :  @mixin radius($value){<br>-webkit-border-radius:$value;<br>-moz-border-radius:$value;<br>border-radius:$value;}
+	<br>
+	.abc{@include radius(5px)}<br>  .xyz{@include radius(10px;)}</p>
+	<p class="mixin3">the quick fox jump over the lazy dog</p>
+	<p class="mixin4">the quick fox jump over the lazy dog</p>
+
+<!-- sass mixins end -->
+
+<!-- sass extand start -->
+<h3>sass extand</h3>
+<p>in this repeated code does not repeat in next upcoming id,class etc , but cn be used extand feature.it same as mixins,but in mixin we can use parameters in this cannot use, </p>
+<p class="fyz">example:  .abc{color:red;font-size:5px;lineheight:5px;text-transformation:uppercase}<br>
+.xyz{color:green; @extand .abc;}<br>
+pqr{color:yellow; @extand .abc;}
+<p class="fy">the quick fox jump over the lazy dog the quick fox jump over the lazy dog</p>
+<p class="fz">the quick fox jump over the lazy dog the quick fox jump over the lazy dog</p>
+
+</p><br><br>
+<!-- sass extand end -->
+
+<!-- sass oprators start -->
+<h2>types of oprator in sass</h2>
+
+<h3>equality and relational and boolean</h3>
+<p>equality oprator is 2 types<br> == is used for equal to and != is used for not equal to, it gives true or false result</p>
+<p>equality and relational oprator is basically used with ifCondition()</p>
+<p>Now relational oprators which is only used with numaric values<br> "<" is for less than<br> ">" is used for greater then<br> "<=" is used for less than equal to<br> ">=" is used for greater than equal to </p>
+<p>Now boolean oprator,it also gives true or false result,it is used with multiple conditions</p>
+<p>"and" "or" "not"<br> "and" if both conditions are true then result will true else false.exmple: condition1 and condition 2<br>
+"or" if either condition are true then true elase false, example: condition1 or condition2<br>
+"not" it always return opposite value.if condition true it return false and vice versa. example: not condition  
+</p>
+<h3>numaric and string oprators</h3>
+<p>string oprator is <b>"+"</b>string oprator is used to concatenat "+" string with string and string with numaric </p>
+<p>numaric oprater is "+"addition "-"substraction "*"multiplication "/"division "%"modulas or reminder<br> these are used with arithmatic calculation </p>
+<p>numaric oprator is used for complex designing like in loops or ifConditions etc</p>
+
+<h3>Interpolation</h3>
+<p>interpolation is "<b>#{..}</b>"<br> concatination is used to concatinate numaric value with string or string with string value<br>
+ and we canot used concatination with CSS properties neither for selectors(id,class etc). <br>
+ margin- + $position:20px, it is wrong, property with variable cannot concatinated with "+", neither selecter can concatinate with variables.i.e .icon- + $name{  }<br>
+</p>
+<p>if we want concatination between properties or in selecters we will use <b>interpolation</b><br>example <br> margin-#{$position}:20px; or for selecter .icon-#{$name}{...css property..} </p>
+
+<!-- sass oprators end -->
+
+<!-- sass function start -->
+
+<h3>if function</h3>
+<p>it is same like javascript function,<br> function and mixin are almost same but in function it return value if calculation is used and mixin print same value<br>
+in function return value will used in other place </p>
+<p>@function function-name($parameter){ @return ($parameter/2) +px; }<br>.abc{ width:function-name(1000);}<br>it return width 500  </p>
+
+<!-- sass function end -->
+
+
+<!-- Number functions start-->
+<h3>Sass number functions</h3>
+<p>abs()  =>return absolute value e.g margin:abs(10px)  it rutrn margin:10px</p>
+<p>ceil()  =>it return upper value e.g margin:ceil(4.3) , it return margin:5;</p>
+<p>floor()  =>it return lower value e.g margin:ceil(4.7) , it return margin:4;</p>
+<p>round() =>it rturn lower or upper depend on above or below 5 after friction. 4.4 return 4 and 4.6 return 5 and 4.5 retutn 5 </p>
+<p>max() => it return maximum value e.g margin:max(1px,4px,3px) return margn:3; </p>
+<p>min() => it return manimum value e.g margin:max(1px,4px,3px) return margn:1px;</p>
+<p>comparable() =>it return true or false, if 2 value can be compared then true else false e.g margin:comparable(2px,1px), it return margin:true;</p>
+<p>percentage()  =>it return percentage of the number e.g margin:percetage(0.2), it return margin:20%;</p>
+<p>random()  =>it return random vlue e.g margin: random(); return margin: random number</p>
+<p>unit()  =>it return units e.g margin:unit(10px); ir return margin: "px";</p>
+<p>unitless() => it return true or flase,if value have unit i.e "10px" then ie return false else true. e.g margin:unitless(10),it return margin:"true"<br> it can be used with if condition </p>
+
+<!-- Number functions end -->
+
+<!-- string functions start-->
+
+<h3>sass string functions</h3>
+<p>quote() =>it return string in quotes e.g font-family:quote(arial) ,return font-family:"arial";</p>
+<p>unquote() => it return string without quotes if it have e.g font-family:quote("arial") ,return font-family:arial;<br>it cannot used as in example ,but it can be used in functions or in mixins etc</p>
+<p>str-index() => it return the index number of string e.g font-family:str-index("fayaz rashid","rashid").it return font-family:7; ,bc R is index nmbr is 7<br>it has 2 parameters, 1)string ,2)find index</p>
+<p>str-insert() => it used to insert string e.g font-family("fayaz rashid","sarozai",13); it return font-family("fayaz rashid sarozai")<br>it has 3 parameters, 1.string 2.insert word 3.on which index nmbr</p>
+<p>str-length() => it return the number of characters e.g font-family:str-length("arial font"), it return font-family:10;</p>
+<p>str-slice() =>it used to pick some thing from string e.g font-family:str-slice("fayaz rashid",3 , 9), it return font-family:"yaz rashi";<br> it has 3 parameters 1.string 2.start point 3.end point .we can take parameters in negative too, which start from the end side</p>
+<p>to-upper-case() => it return value in upper-case e.g font-family:to-upper-case("arial") it return font-family:ARIAL;</p>
+<p>to-lower-case() => it return value in lower-case e.g font-family:to-upper-case("ARial") it return font-family:arial;</p>
+<p>unique-id() => it always return unique ID ,it dont have any parameters, the return id alwyas have no characters, e.g font:unique-id() ,it return font:umcg70vo4; . always give different unique ids</p>
+
+<!-- string functions end-->
+
+<!-- color functions start-->
+<h3>Sass colors functions</h3>
+<p>lighten() => it return lighten face of color e.g color:lighten(green,30); .it return pink color having 30% lighten </p>
+<p>darken() => it return darken face of color e.g color:darken(pink,70); .it return pink color having 70% darken</p>
+<p>adjust-hue() =>it return nearer color of mention color e.g color:adjust-hue(green,20); .the 2nd parameters is in degree</p>
+<p>saturate() => it return the brightness of mention color e.g color:saturate(brown,40); . it return 40% brghtness</p>
+<p>desaturate() => it is opposite of saturate,it return the darkness of a mention color</p>
+<p>mix() => it is used to mix 2 or more colors e.g color:mix(pink,red,50); it return 50% red with base color i.e pink</p>
+<p>transparentize() =>it is used to transparentizea color, e.g color:transparentize(red, 0.3); it return 30% transparent</p>
+
+<!-- color functions end -->
+
+<!-- Sass list functions -->
+<h3> Sass list functions</h3>
+<p>list function is used to store more then 1 values in variables e.g $list1:10px 20px 30px . or $list2:10px,20px,30px; . or $list3:[10px,20px,30px];<br> to munipulate list we used different functions</p>
+<p>length()  => it return number of values in varaible e.g padding:length($list1); return padding:3; .bc $list1 has 3 values<br> length((width:10px;,height:10px)); it return 2,bc of two values </p>
+<p>nth() =>it rturn the value of that index number e.g padding:nth($list,2) it rturn 20px; nth(varaible,indexNumber)it has 2 parameters<br>without varaible e.g nth([list1,;ist2,list3],3) it return list3 </p>
+<p>set-nth() =>it used to replace value in existance varaibles e.g padding:set-nth($list,2,2em) it return padding:10px 2em 30px;  ,it has 3 parameters (varaible,indexNumber which is replace,new value)<br>padding:nth([ab bc cd],1,fayaz) return padding:fayaz bc cd; </p>
+<p>join() =>it is used to join/combine 2 or more list e.g padding:join($list1,$list2); it return padding:10px 20px 30px 10px 20px 30px;<br> padding:join((1 2 3),(4 5)) return padding(1 2 3 4 5);<br>
+the 3rd parameter is seperator e.g padding:join($list1,$list2,space) or padding:join($list1,$list2,comma) </p>
+<p>append() =>it add some new value to the list at the end e.g paddding:append($list1,70px,space); it return padding:10px 30px 40px 70px; .it has also 3 parameters (varaiable,value,seperator)</p>
+<p>zip() =>it combine 2 lists and 1st value of 1st list combine with 1st value of 2nd list and so on e.g padding:zip($list1,$list2); it return padding:10px 10px,20px 20px,30px 30px; <br>padding:zip(red green blue,10px 15px 5px); it return padding:red 10px, green 15px,blue 5px; </p>
+<p>index() =>it used to find some value in a list e.g padding:index($list1,20px); it return it index nmbr padding:2; ,2 is its index nmbr </p>
+<p>list-separator() =>it is usd to show us which sepertor is used in a list e.g padding:separtor($list1) it return padding:space;<br>these all are used with if condition </p>
+<p>is-bracketed() =>it is used to wether squarebracket are used in a list or not, it return 2 result :true or false<br>e.g padding:is-bracketed($list), it return padding:false; </p>
+
+<!-- Sass list functions end -->
+
+<!-- Sass selector functions start -->
+<h3>sass selecter  functions</h3>
+<p>seleter is basically CSS selecters(i.e id,classes,tag name etc) which are manupulate with sass functions e,g .abc a ,#ab li etc<br>selecter functions are used in varaibles e.g $selector:selector-nested("ul","li");  it nested these 2selectors ,now this varaible is used in class by interpolation functions ,#{$selector}{width:10px;} , it return ul li{width:10px;}
+<br>only the 1st 3 slector functions are used in any projects, not all these mostly </p>
+<p><b>1)selector-nest()</b> =>it is used to make parent and child selector,1st parameter parent, 2nd is child<br>e.g $selector:selector-nested(".abc,.xyz","p") then interpolate it #{$selector}{width:20px;} now it return .abc p,.xyz p{width:20px;}<br>selector-nested(".abc","&:hover") return .abc:hover{} </p>
+<p><b>2)selector-append()</b> =>it is used to combine 2 selectors e.g $selector:selector-append("a",".active") after interpolation it return a.active{..}<br>it combine 2 selectors while selector-nested separate 2 selecters which are present in their parameters other example (".abc",_copy,_image) return .abc_copy,.abc_image </p>
+<p><b>3)selector-replace()</b> =>it is used to replace selector,it has 3 parameters ("class in which replace","on which replace","new value") e.g $selector:selector-replace("a.abc",".abc","link") it return a.link{..}, it remove the 2nd parameter and and add third parameter </p>
+<p><b>4)is-superselector()</b> =>it is used just to test,it return true or false .it has 2 parameters("superselector","subselector"), it find superselecter in subseleter<br>e.g is-superselector("a","a.active") it return true bc a is present in a.active ,it is basically used with ifConditions  </p>
+<p><b>5)simple-slectors()</b> =>it seperate 2 or more selectors e.g simple-selectors("a.abc"); it return a,.abc{...} </p>
+<p><b>6)selector-unify()=></b>it is used to match 2 selectors if possible,if not possible then nothing will return<br>e.g selector-unify("a",".active") it return a.active{..} ,if selector-unify("a","h2") it return nothing </p>
+<p><b>7)selector-extend()=></b> it just like unify selector but there is some difference which is very complicted,it is not used proffisionlly </p>
+
+<!-- Sass selector functions end -->
+
+<!-- Sass map functions start -->
+<h3>sass map functions</h3>
+<p>it is just like list functions,we can store multiple values in a varaibles just like list, but on other method  e.g $map:("red":#ff0000,"green":#00ff00);<br> in list there will index number of each value while here we use keys i.e red is a key and green is another key, it has same functions as in list functions<br><b>$fontWeight:("regular":400,"medium":500,"bold":700); <br>$light-weight:("lightest":100,"light":300) </b></p>
+
+<p><b>1)map-get()=></b> it is used to get a value of a key e.g font-weight:map-get($fontWeight,"medium"). it has 2 parameters (varaible,key) . it return font-weight:500; </p>
+
+<p><b>2)map-merge()=></b> it is used to combine to different maps,it is not used as others, 1st we make a map of 2 different maps i.e $merge:map-marge($fontWeight,$light-weight);<br> then it is used with map-keys or map-values etc. now font-weight:map-keys($merge); ,now it return both varaible keys in single map </p>
+
+<p><b>3)map-remove()=></b> it is also used as map-merge,it remove keys or values, it is used with map-keys or map-values ,procedure as above   </p>
+
+<p><b>4)map-keys()=></b>it is used to show all keys which is in varaible e.g font-weight:map-keys($fontWeight); it return font-weight:"regular","medium","bold"   </p>
+
+<p><b>5)map-values()=></b> it is just like map-keys, it return all values of keys e.g font-weight:map-values($fontWeight); it return font-weight:400,500,700;    </p>
+
+<p><b>6)map-has-key()=></b> it is used to find a key in varaible, it return true or false e.g font-weight:map-has-key($fontWeight,"bold"), it return true,  </p>
+
+<!-- Sass map functions end -->
+
+<!-- Sass introspection functions start -->
+<h3>sass introspection functions</h3>
+<p>these are used with conditions<br>there is 4 varaibles having different type of values<br>$num:10px; <br>$char:"arail";<br>$list:10px 20px 30px;<br> $map:("regular":400,"medium":500);   </p>
+
+<p><b>1)varaible-exists() =></b> it is used to check wether variable is exist or not in sass file, it return true or false e.g variable-exists(num); it return true bc "num" varaible is exist in file   </p>
+
+<p><b>2)global-variable-exists() =></b> it is used to check varaible in whole sass file,it does not check local varaible which is exist in a class e.g global-variable-exists(border)  </p>
+
+<p><b>3)mixin-exists() =></b> it is used to check mixin that wether it exist or not in sass file e.g mixin-exists(border)   </p>
+
+<p><b>4)function-exists() =></b> it is used to check wether it is function or not in sass file e.g function-exists(border)   </p>
+
+<p><b>5)type-of() =></b> it is used to check variables that wether it is number type,string,map,list etc e.g type-of($num) it return number; bc it is number type   </p>
+
+<p><b>6)inspect() =></b> it is not used anywhere   </p>
+
+<!-- Sass introspection functions end -->
+
+
+<!-- sass @content directive -->
+<h2>@content directive</h2>
+<p>if we want to add css property by using mixin,then it is possible only by using @content</p>
+<p>example:<br>@mixin bd-radius($value) {-webkit-border-radius:$value; -moz-border-radius:$value; border-radius:$value;  @content;} </p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

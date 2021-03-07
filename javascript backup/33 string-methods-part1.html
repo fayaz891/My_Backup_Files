@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+/*string methods 
+ it has 22 methods
+
+ property does not require '()' i.e length
+ while method require '()' i.e touppercase etc
+*/
+
+//1) length property, it showa total nmbr of words,digits etc
+
+var a="fayaz is a good boy";
+ var b=a.length;
+document.write(b);
+document.write("<br>");
+
+
+// toLowerCase() and toUpperCase, lowercase change all letters into lowercase while uppercase is chnge into uppercase
+var b=a.toLowerCase();
+document.write(b);
+document.write("<br>");
+
+var b=a.toUpperCase();
+document.write(b);
+document.write("<br>");
+
+// includes() ,it is used to search any words/digits etc in a string and answer will be true or false
+var b=a.includes("fayaz");
+document.write(b);
+var b=a.includes("FAYAZ"); //case sensitive
+document.write(b);
+document.write("<br>");
+
+// startsWith() and endsWith(), it search start words and end words in a string
+var b=a.startsWith("fayaz");
+document.write(b);
+
+var b=a.endsWith("fayaz");
+document.write(b);
+document.write("<br>");
+
+
+// search() ,it return exact position of a value in a string means index no. show, if it does not find correct value it show -1 in a result
+var b=a.search("good");
+document.write(b);
+document.write("<br>");
+
+
+// match(), it shows exact value in a sting and make an array of these words
+var a="fayaz is a good boy ,he is good person,good playaer and everything is good in fayaz"
+
+var b=a.match(/good/g); //g means globally,means in whole string
+document.write(b);
+document.write("<br>");
+
+
+// indexOf() ,it find the index no. of a value, it just like an array indexof,it shows index no. of first 'good' word
+var b=a.indexOf("good");
+document.write(b);
+document.write("<br>");
+
+// lastindexof(), it same is indexof but it searches from the ending point
+var b=a.lastIndexOf("good");
+document.write(b);
+document.write("<br>");
+
+
+// replace(),it replace one word into other
+var b=a.replace("good","very good")//it replace only 1st good
+document.write(b);
+document.write("<br>");
+
+var b=a.replace(/good/g,"very good");//replace all good
+document.write(b);
+document.write("<br>");
+
+
+// trim(), used to trim/cut extra spaces btween word
+var b=a.trim() //it dont have any value
+document.write(b);
+document.write("<br>");
+
+
+
+
+
+
+
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

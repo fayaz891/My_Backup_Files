@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#header{background-color: lightblue;}
+			#nav{background-color: lightcyan;}
+			#xyz{background-color: yellow;}
+		</style>
+		
+	</head>
+	<body>
+		<header id="header" class="">
+			<h1>DOM value Get Methods</h1> 
+		</header>
+		<nav id="nav" class="abcd" style="border:1px solid red;" onclick="xyz()">
+			<ul>
+				<li  style="display: inline;"><a href="" title="">home</a></li>
+				<li style="display: inline;"><a href="" title="">gallery</a></li>
+				
+			</ul>
+		</nav>
+<div>we can get with DOM these 3 things
+			1)HTML
+			2)Text
+			3)Attribute
+			
+			Methods of Set
+			1) innerText(it helps to change text)
+			2) innerHTML(it  helps to change HTML)
+			3)SetAttribute  
+			4)Attribute
+			5)removeAttribute
+</div>
+
+<script>
+	  //DOM set value
+
+    //innertext &innerHTML, it helps to change text and HTML in header
+	var a;
+	a=document.getElementById("header").innerText;
+
+	document.getElementById("header").innerHTML="<h1>DOM Set Methods</h1>" //If i use innertext then it workd on text and <h1> tag will also printed ,thats why use innerhtml which worked as html
+
+	console.log(a);
+
+
+ 
+
+    //SetAtrribute  it helps to change attribute i.e id,class,style,onClick etc
+     var c;
+     c=document.getElementById("nav").getAttribute("style");
+
+    document.getElementById("nav").setAttribute("style","border:2px dotted green;");
+
+	console.log(c); 
+
+
+
+    //Attributes  IT changes any attributes in the form of array,this is deficult method, the above method will easy
+
+    var d;
+	d=document.getElementById("nav").getAttribute("class");
+
+	document.getElementById("nav").attributes[1].value="xyz";
+	console.log(d);
+
+   
+    
+    //removeAttribute ,it delete an attribute only,not set or get
+
+   
+	document.getElementById("header").removeAttribute("id")
+
+
+
+
+
+</script>
+
+	</body>
+</html>

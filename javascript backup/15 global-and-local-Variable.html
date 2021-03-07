@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+		var a="fayaz";  
+		                   /*global variable is outof function which
+		                   worked in function as well as outside of function */
+
+		function abc() {
+		      document.write(a); 
+		}
+	abc();
+
+
+                     
+
+                     /*local variable is within function and does not worked out of function*/
+	function ab () {
+
+			var b="rashid"; 
+			document.write(b);
+		}
+
+	ab();
+
+
+
+
+		
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

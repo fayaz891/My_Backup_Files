@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADvance selector</title>
+	<style>
+
+         *{margin: 10px;
+           padding: 5px;}
+        .ul *{border: 1px solid black;}
+		p{color: red;}
+		.p{color: green;}
+		#p{color:orange;}
+
+
+		.desc span{border: 3px solid green;}
+        
+        .ulli li{color: green;}
+        .ulli > li{color: blue;}
+
+        .adj + p{border: 2px dotted green;}
+
+        .gener~p{color: brown;}
+        
+	</style>
+</head>
+<body>
+	<h1>simple selector and combinator selector</h1>
+<h2>simple selector</h2>
+
+<ul class="ul">
+<li>type selector</li>
+<li>class selector</li>
+<li>id selector</li>
+<li>universal selector</li>
+</ul>
+
+
+<h3>type selector</h3>
+<p>this selector is a type of tag</p>
+
+<h3>class selector</h3>
+<p class="p">this selector is denoted by "."</p>
+
+<h3>id selector</h3>
+<p id="p">this selector is denoted by "#"</p>
+
+<h3>universal selector</h3>
+<p>universal selector cover all tags,it is denoted by "*"</p>
+
+
+
+
+<h2>combinators selector</h2>
+
+<ul>
+<li>Descendant selector</li>
+<li>Direct Child Selector</li>
+<li>Adjacent Sibling Selector</li>
+<li>General Sibling Selector</li>
+</ul>
+
+
+<h3>descendant selector</h3>
+<p class="desc">it is combination of 2 items, we targeted <span>internal part</span> in any tags</p>
+
+<h3>direct child selector</h3>
+<p>it is denoted by ">" </p>
+<ul class="ulli">
+	<li>orange</li>
+	<li>
+		<ul>
+			<li>apple</li>
+			<li>mango</li>
+		</ul>
+	</li>
+	<li>green</li>
+</ul>
+
+<h3>adjacent sibling selector</h3>
+
+<div class="adj"> it is denoted by "+"  </div>
+<p>this is example of adjacent sibling selector</p>
+<p>this is example of adjacent sibling selector</p>
+<p>this is example of adjacent sibling selector</p>
+
+
+<h3>general sibling selectors</h3>
+<div class="gener">it is denoted by "~"
+it targeted all those tags which you mentioned</div>
+<p>this is example of general sibling selector</p>
+<p>this is example of general sibling selector</p>
+<p>this is example of general sibling selector</p>
+<p>this is example of general sibling selector</p>
+<p>this is example of general sibling selector</p>
+
+</body>
+</html>

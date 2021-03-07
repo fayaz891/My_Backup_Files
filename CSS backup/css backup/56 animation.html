@@ -1,0 +1,165 @@
+<html>
+<head>
+<style>
+
+.p1{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 text-align:center;
+	 
+	 animation-name:sample;
+	 animation-duration:2s;
+	 
+	 animation-iteration-count:3;
+	 animation-iteration-count:infinite;
+	 
+	 animation-direction:alternate;
+	 animation-direction:normal;
+	 animation-direction:reverse;
+	 animation-direction:alternate-reverse;
+	 
+	 animation-delay:2s
+	 
+	 animation-timing-function:ease;
+	 animation-timing-function:linear;
+	 animation-timing-function:ease-in;
+	 animation-timing-function:ease-out;
+	 animation-timing-function:ease-in-out;
+	 animation-timing-function:step-start;
+	 animation-timing-function:step-end;
+	 animation-timing-function:steps(4);
+	 animation-timing-function:cubic-bezier(0.1,0.5,0.9,0.2);
+	 
+	 }
+
+@keyframes sample{from{border-radius:0%;}
+                  to{border-radius:50%;}}	 
+	
+.p2{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 text-align:center;
+	 
+	 animation-name:sample1;
+	 animation-duration:3s;
+	 
+	 animation-iteration-count:infinite;
+	 
+	 animation-direction:alternate;}
+	 
+
+@keyframes sample1{0%{border-radius:0%;}
+                  100%{border-radius:100%;background-color:blue;      color:blue;}}	 	 
+
+.p3{background:yellow;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 
+	 animation:sample2 4s cubic-bezier(0.6,0.3,0.9,1.0) 1s infinite alternate;
+	 }
+	 
+@keyframes sample2{0%{border-radius:0%;}
+                  
+				 50%{border-radius:50%;background-color:green;} 100%{border-radius:100%;background-color:red;      color:blue;}}	 	 	 
+
+.r{height:50px;
+   width:500px;
+   margin-top:20px;
+   background-color:pink;
+   animation-name:sample3;
+   animation-duration:3s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+   
+   animation-timing-function:ease;}
+   
+.r1{height:50px;
+   width:500px;
+   margin-top:20px;
+   background-color:gray;
+   animation-name:sample3;
+   animation-duration:3s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+   
+   animation-timing-function:linear;}
+   
+.r2{height:50px;
+   width:500px;
+   margin-top:20px;
+   background-color:yellow;
+   animation-name:sample3;
+   animation-duration:3s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+   
+   animation-timing-function:ease-in;}
+   
+.r3{height:50px;
+   width:500px;
+   margin-top:20px;
+   background-color:brown;
+   animation-name:sample3;
+   animation-duration:3s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+   
+   animation-timing-function:ease-out;}
+   
+.r4{height:50px;
+   width:500px;
+   margin-top:20px;
+   background-color:green;
+   animation-name:sample3;
+   animation-duration:3s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+   
+   animation-timing-function:ease-in-out;}
+   
+.r5{height:50px;
+   width:500px;
+   margin-top:20px;
+   background-color:blue;
+   animation-name:sample3;
+   animation-duration:3s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+   animation-timing-function:steps(5);}
+   
+@keyframes sample3{0%{width:50px;}
+                   100%{width:500px;}}
+
+</style>
+</head>
+
+<body>
+animation selector (@keyframes animation-example{from{..}to{..}}). from and to animation is not common, mostly use the second one (%) </br>
+(@keyframes animation-name{0%{...}  100%{...}})</br>
+</br>
+animation:name duration timing-function delay iteration-count direction
+
+<div class="p1">FAYAZ
+</div>
+
+
+<div class="p2">RASHID
+</div>
+
+<div class="p3">
+</div>
+
+
+<div class="r">ease</div>
+<div class="r1">linear</div>
+<div class="r2">ease-in</div>
+<div class="r3">ease-out</div>
+<div class="r4">ease-in-out</div>
+<div class="r5">step</div>
+
+
+</body>
+</html>

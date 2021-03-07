@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+
+.p1{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;}	
+.r1{width:150px;
+    height:70px;
+	background:green;
+	
+	transform:rotateX(120deg);}		   
+	
+.p2{background:red;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 
+	 perspective:400px;
+	 }
+	 
+.r2{width:150px;
+    height:70px;
+	background:green;
+	transform:rotateX(120deg);
+	}	
+	
+
+.p3{background:yellow;
+	 margin:50px auto;
+	 width:150px;
+	 height:70px;
+	 
+	 perspective:400px;
+	 perspective-origin:bottom;
+	 perspective-origin:left;
+	 perspective-origin:left bottom;
+	 
+	 perspective-origin:80% 30%;
+	 }
+	 
+.r3{width:150px;
+    height:70px;
+	background:blue;
+	transform:rotateY(120deg);
+	}	
+
+.p4{
+	margin:50px auto;
+     background:green;
+	 width:70px;
+	 height:70px;
+	 }
+</style>
+</head>
+
+<body>
+perspective shows outsideof edges i.e 3D loop
+
+
+<div class="p1">
+<div class="r1">Fayaz</div>
+</div>
+
+
+<div class="p2">
+<div class="r2">Rashid</div>
+</div>
+
+<div class="p3">
+<div class="r3">Rashid</div>
+</div>
+
+<div class="p4">A</div>
+
+
+</body>
+</html>

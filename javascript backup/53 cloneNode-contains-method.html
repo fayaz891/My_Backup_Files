@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html id="main">
+<head>
+	
+	
+</head>
+<body>
+	<div id="outer">
+
+      <h1>Fayaz rashid</h1>
+
+  <ul id="list">
+     <li> Grapes</li>
+     <li> orange</li>
+     <li> banana</li>
+     <li>apple</li>
+  </ul>
+
+
+
+  <ul id="list1">
+     <li> carrot</li>
+     <li>reddish</li>
+  </ul>
+	</div>
+
+  <div id="abc">
+  	<h1>contains method</h1>
+
+  	<p id="ab"> this is usd to learn contains method</p>
+  	
+  </div>
+	 
+    <script>
+   
+    //cloneNode method,
+     var target=document.getElementById("list").children[1];
+
+     copyelement=target.cloneNode(true);
+
+     //by default cloneNode value is false,if we give true value, it will give inner text too
+     //console.log(copyelement);
+
+     document.getElementById("list1").appendChild(copyelement);
+
+
+
+    //contains() method,it is used to search an id,clasName etc and find that div, it gives true or false result, it will search in their childs,grandchilds or great grandchilds.
+
+     var target=document.getElementById("abc");
+
+     var find=document.getElementById("ab");
+
+
+   var nowfind=target.contains(find);
+  console.log(nowfind);
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		    #header{border: 2px solid red;}
+			#nav{border: 2px solid green;}
+			#content{border: 2px solid blue;}
+			.header{background-color: limegreen;}
+			.nav{background-color: yellowgreen;}
+			.content{background-color: greenyellow;}
+
+			.a{color: red;}
+			.ab{background-color: yellow;}
+            .abc{font-family: ravie;}
+		
+	</style>
+	
+</head>
+<body>
+	 <div id="header" class="header">
+     	<h1>Class List Methods</h1>
+     </div>
+
+     <div id="nav" class="nav a">
+     	<ul>
+     		<li>home</li>
+     		<li>gallery</li>
+     		<li>contact</li>
+     	</ul>
+     </div>
+
+     <div id="content" class="content">
+     	<p>
+     		Peshawar is City where most of their pupolations are pakhtoons, there are several universities large number of colleges
+     	</p>
+     	
+     </div>
+
+
+
+	<script>
+		
+		 /*class list methods
+
+             1) add(class1,class2...)
+             2) remove(class1,class2...)
+             3) toggle(class)
+             4) contains(class)
+             5) item(inex)
+             6) length        */
+
+         //add(),if we want to add a class to the id or tag or classname then use add() to class list
+         document.getElementById("header").addEventListener("click",abc);
+
+         function abc () {
+         document.getElementById("header").classList.add("a","ab")
+         }
+
+
+         //remove(),if we want remove class
+         document.getElementById("nav").addEventListener("click",xyz);
+         function xyz () {
+         document.getElementById("nav").classList.remove("a","nav")	; 
+         }
+
+
+         //length, it denoted the length of classes,that how many classes are their in an ID
+       var a=document.getElementById("nav").classList.length;
+	     console.log(a);
+
+
+	     //toggle(), if we want to add a class on event and remove class on event, i.e by click add a class and on again click remove class
+
+	     document.getElementById("content").addEventListener("click",pqr);
+	     function pqr () {
+	     document.getElementById("content").classList.toggle("abc"); 
+	     }
+
+
+         //item(index),if we want to see particular class  in large nmbr of clases, then use item,we find its index nmbr and then picked that class
+
+        var a=document.getElementById("nav").classList.item(1);
+        console.log(a);
+
+
+        //contains(), it is used to find a class,it give ans true or flase
+        var a=document.getElementById("nav").classList.contains("nav")
+         console.log(a);
+
+	 </script>
+
+</body>
+</html>

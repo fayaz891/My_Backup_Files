@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pseudo element</title>
+	<style>
+		
+		p::first-letter{color:red;
+		                 font-weight: bold;
+		               font-size: 30px;}
+
+		p::first-line{background-color: yellow;} 
+
+
+
+		p::selection{background-color: red;
+		             color:white;}
+
+
+		input[name="fayaz"]::placeholder{color:green;font-size: 18px;}
+
+
+		#p::before{content: "fayaz is good boy"; font-weight: bold; font-size: 20px;
+	              }                           
+	    #p:hover::after{content: "fayaz is very intelligent"; font-weight: bold; font-size: 20px; background-color: green}
+	    
+
+	    h1:hover::after{content: " fayaz"; color:yellow;}
+
+	    input{caret-color: red;
+	          caret-shape:;}          
+	</style>
+
+</head>
+<body>
+	<h1>pseudo-element</h1>
+
+<div>
+	<p>he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid</p>
+	
+<ul>
+	<li>mango</li>
+	<li>grapes</li>
+	<li>banana</li>
+</ul>
+
+	<p>he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid</p>
+</div>
+
+
+<p id="p">he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz rashid he is very good boy he belong to sarozi he passed matriculation he is very inteligent boy his name is fayaz </p>
+<form>
+	name:<input type="text" name="" value="" placeholder="fayaz"><br>
+
+	L.name:<input type="text" name="fayaz" placeholder="rashid">
+</form>
+
+</body>
+</html>

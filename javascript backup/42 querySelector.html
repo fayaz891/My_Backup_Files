@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#header{text-align: center;
+			        background-color: lightyellow;
+			        border: 1px solid green;}
+			#nav{list-style:none;
+			     flow: left;
+			     text-decoration:none;}
+			.content{background-color: tan;}     
+		</style>
+		
+	</head>
+	<body>
+		<div id="header" class="abc">
+			<h1>PRACTICE</h1>
+		</div>
+
+		<div>
+			<ul id="nav" class="abc">
+				<li>home</li>
+				<li>gallery</li>
+			</ul>
+		</div>
+
+		<div class="content abc">
+			<p>it is a hard day when we was climbed on a mountain and some of us are very tired and we enjoy alot there</p>
+		</div>
+
+
+		
+		<script>
+
+			//queryselector is used better as use getElementById,getElementByClassName, or getElementByTagName,WE DONT NEED THESE if use querySelector
+
+           
+			var a;
+			a=document.querySelector("#header").innerHTML="<h1>Fayaz Rashid</h1>"
+
+			//queryselectAll, it targeted all those ids,classes,tags which are called and are same name
+			var a;
+			a=document.querySelectorAll(".abc");
+			console.log(a);
+
+
+            var a;
+			a=document.querySelectorAll(".abc")[1];
+			console.log(a);
+
+            var a;
+			a=document.querySelectorAll(".abc")[1].innerHTML="<li>home1</li>   <li>gallery1</li>";
+          
+
+
+
+
+		</script>
+		
+	</body>
+</html>

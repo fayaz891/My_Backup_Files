@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pseudo-classes</title>
+      <style>
+      	.ul :first-child{color: blue;}
+      	.ul :last-child{color: red;}
+
+         .ul1 :nth-of-type(2){color:green;}
+         .ul1 :nth-last-of-type(2){color:green;}
+
+      	.pr :nth-child(2n){border: 2px solid green;}
+      	.pr :nth-child(5){border: 2px solid red;}
+      	.pr :nth-last-child(1){border: 2px solid yellow;}
+
+        .ul2 :only-child{border: 1px solid blue;}
+
+        .pli :only-of-type{color: orange;}
+
+        .pli1 :first-of-type{border: 2px dotted green;}
+        .pli1 :last-of-type{border: 2px dotted blue;}
+
+        div:empty{border: 5px solid red;}
+
+
+
+
+
+        .pq li:not(.test){border: 2px solid yellow;}
+
+        .la :lang(en){text-decoration: underline;}
+        .la :lang(pash){color: green}
+
+
+      </style>
+</head>
+<body>
+	<ul class="ul">
+		<li>blue</li>
+		<li>green</li>
+		<li>red</li>
+	</ul>
+	<br><br><br>
+	<ul class="ul1">
+		<li>blue</li>
+		<li>green</li>
+		<li>red</li>
+		<li>red</li>
+		<li>red</li>
+	</ul>
+	<br><br><br>
+
+	<div class="pr">
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+
+		<p>this is paragrapgh and practice on nth child,it also work as 2n(2,4,6...)</p>
+		
+	</div>
+	<br><br><br>
+
+	<ul class="ul2">
+		<li>it worked on single child</li>
+	</ul>
+	<br><br><br>
+
+<div class="pli">
+	<li>green</li>
+	<li>yellow</li>
+	<p>only of type means that only one tag is present of that type</p>
+</div>
+<br><br><br>
+
+<div class="pli1">
+	<li>pakistan</li>
+	<li>pakistan</li>
+	<li>pakistan</li>
+	<li>pakistan</li>
+	<li>pakistan</li>
+</div>
+<br><br><br>
+
+<div></div>
+<br><br><br>
+
+<ul class="pq">
+	<li>pakistan</li>
+	<li class="test">afghanistan</li>
+	<li>china</li>
+</ul>
+<br><br><br>
+
+<div class="la">
+	<p lang="en">this is for languages</p>
+	<p lang="ur">ye languages kelye hy</p>
+	<p lang="pash">da language depara dy</p>
+	
+</div>
+<br><br><br>
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+//for/in loop , it is basically form for object
+ var a={name:"fayaz",
+        rollno:36,
+        age:25,
+        countary:"pakistan"};
+
+//if we want to print it, we will print one by one value, so it is deficult to write again and again there for for/in loop will be used
+ for (var b in a) {
+      document.write(a[b] + "<br>")
+      }     
+
+ document.write("<br><br><br><br>")
+ 
+
+//if we want to print it along with properties then
+
+var a={name:"fayaz",
+        rollno:36,
+        age:25,
+        countary:"pakistan"};
+
+for (var b in a) {
+      document.write(b +":"+ a[b] + "<br>")
+      }     
+	</script>
+		</head>
+<body>
+	
+</body>
+</html>

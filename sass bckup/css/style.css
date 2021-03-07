@@ -1,0 +1,105 @@
+/*-------------variable start-----------*/
+h1, h2, h3 {
+  color: #0d5bb4; }
+
+p {
+  font-size: 14px;
+  font-family: verdana; }
+
+/*-------------variable end-----------*/
+/*-------------nesting start-----------*/
+nav ul {
+  border: 1px solid green; }
+  nav ul li {
+    padding: 5px; }
+    nav ul li a {
+      background-color: greenyellow; }
+      nav ul li a:hover {
+        text-decoration: line-through; }
+    nav ul li .a2 {
+      color: hotpink; }
+
+/*-------------nesting end-----------*/
+/*-------------partial and imports start-----------*/
+/*on the top i  imported variable part in main/this file, 1st i make a _variable part and then imported in this file
+import each file in sequence other wise erorr may be happening
+*/
+/*-------------partial and imports end-----------*/
+/*-------------Maxins start-----------*/
+.mixin1 {
+  font-style: inherit;
+  font-weight: 500;
+  -webkit-border: 1px solid blue;
+  -moz-border: 1px solid blue;
+  border: 1px solid blue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+.mixin2 {
+  background-color: ivory;
+  -webkit-border: 1px solid blue;
+  -moz-border: 1px solid blue;
+  border: 1px solid blue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+.mixin3 {
+  font-size: 18px;
+  width: 600px;
+  height: 100px;
+  color: red;
+  border: 2px dotted green; }
+
+.mixin4 {
+  width: 800px;
+  height: 50px;
+  color: #4b4b05;
+  border: 2px dotted blue; }
+
+/*-------------Maxins end-----------*/
+/*-------------extand start-----------*/
+.fyz, .fy, .fz {
+  color: #614705;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: #bec9cc;
+  border: 2px solid black;
+  padding: 5px; }
+
+.fy {
+  color: indigo; }
+
+.fz {
+  color: #305a07; }
+
+/*-------------extand end-----------*/
+/*-------------oprators start-----------*/
+.test {
+  padding: 10px; }
+
+.test1 {
+  padding: 12px; }
+
+/*-------------oprater end-----------*/
+/*-------------interpolation start-----------*/
+.interp {
+  margin-right: 20px;
+  margin-bottom: 10px; }
+
+.iconduck {
+  background-color: greenyellow; }
+
+/*-------------interpolation end-----------*/
+/*-------------function start-----------*/
+.abcd {
+  width: 500px; }
+
+.abcde {
+  width: 333.3333333333px; }
+
+/*-------------function end-----------*/
+/*-----------number functions---------*/
+
+/*# sourceMappingURL=style.css.map */
