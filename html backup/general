@@ -1,0 +1,102 @@
+html is used for content and strucutres like <h1></h1>,<button></button>,<p></p> etc
+css is used for decuration like shape, color, style etc
+javascript is used for functionality of the contents to the websites
+
+
+HTML = hyper text markup language
+hyper text = like a hyper link which redirect to other page
+markup langunage = write language like bold words, italic ,header tags etc in one line
+
+<h1> opening tag
+</h1> closing tag
+
+<h1></h1> both called element
+
+to see all elements = https://developer.mozilla.org/en-US/docs/Web/HTML/Element 
+
+downloD live preview extention in vs code(right click and open show preview)
+
+www.lipsum.com  = for lorem ipsum paragraph
+
+<tag attribute="value" attribute="value">content</tag>
+
+----
+HTML Boilerplate is basically called below basic strucure of the html
+write "!" and press enter you will get entire below html Boilerplate
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+--------------------------------
+inline css
+<h1 style="background-color: blue;"> fayaz</h1>
+<h1 attribute="value">fgdg</h1>
+<h1 attribute="properties:value">sdfsdgsd</h1>
+
+internal css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{color:green;font-size:10px;}
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+----------------------------------
+===element selector===
+h1{ color: blue }
+(h1) means element selector
+
+===class selector ===
+.heading{ color: red}
+"." means class
+
+<h1 class="heading">gfhfhfh</h1>
+
+===id selector ====
+#main {color:red}
+"#" means Id
+<h1 id="main">fgdfgdgrd</h1>
+
+id is used for one element in the page like h1, header,footer tag, 
+while class is usedfor many elements like paragraph, button etc
+
+
+===attribute selector===
+p[draggable] { color: red;}
+
+draggable is the attribute
+<p>sfdfs</p>
+<p draggable="true">sdsdgsd</p> it select this
+
+p[draggable="true"] { color: red;}
+<p draggable="true"> fhdd </p>
+
+===universal selector===
+*{color:red;}
+
+px
+pt
+em (if parent tag font-size 20px then 1em=20px,2em=40px)
+rem (if root tag like html font-size is 20px then 1rem =20px)
+
+www.googlefonts.com
+
+use googlefonts link in html head tag
+<head>
+    <link href="https://googlefonts......." />
+</head>
+
+<h1 style="font-family: paste role;"></h1>
