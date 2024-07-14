@@ -91,6 +91,7 @@ px
 pt
 em (if parent tag font-size 20px then 1em=20px,2em=40px)
 rem (if root tag like html font-size is 20px then 1rem =20px)
+vh viewport height (size of screen) like height :100vh
 
 www.googlefonts.com
 
@@ -100,3 +101,21 @@ use googlefonts link in html head tag
 </head>
 
 <h1 style="font-family: paste role;"></h1>
+
+=====
+RGB color code creater 
+https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/
+-------
+add pesticide extenstion to the google chrome 
+https://chromewebstore.google.com/detail/pesticide-for-chrome/bakpbgckdnepkmkeaiomhmfcnejndkbi?pli=1
+
+--------------------------------
+
+
+complete guide to flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+==================================================================
+
+play with flex layout
+https://appbrewery.github.io/flex-layout/
+=================================================================

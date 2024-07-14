@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Direction</title>
+  <!-- HINT:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+  https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators 
+  -->
+  <style>
+    .container {
+      color: white;
+      border: 5px solid gold;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;   /* nowrap means outside the screen size*/
+      justify-content:space-between;
+      align-items:flex-start;
+      width: 70vh;
+      
+    }
+
+    .container > div {
+      flex-basis: 0px;  /*set the width of of row based flex-box or set height of the colmn based flex*/
+      flex-grow: 1;  /*flexbox will not grow by changing of screen size if value =0. */
+      flex-shrink: 1; /*flexbox will not shrink by changing of screensize if value =0. */
+      /*or
+      flex: flex-grow flex-shrink flex-basis;
+      flex: 1 1 0;
+      flex: 1;    means grow and shrink=1 and basis=0
+      flex: 2;   means grow and shrink=2 and basis=0
+      */
+    
+    }
+
+    /*
+    max and min width > flex-basis > width > content-width
+   flex sizing is looking for first "max and min width" then "flex-basis" then "width" then "content-width"
+   The max width of the flexbox is the miniumum width of the longest word in the flexbox i.e "<h1>Study Programmitically</h1> => by shrinking the miniumum size is equalto 'Programmitically' word
+   If we set width for the flex then width will have equal to the define value  
+   */
+
+    .red {background-color: #eb4d4b;
+      order: 1;
+      align-self: flex-end;
+      align-content:space-around;  /*this work with flexbox-wrap only */
+    }
+    .orange {background-color: #f0932b;order: 2;}
+    .yellow {background-color: #f6e58d; order: 3;}
+    .green {background-color: #6ab04c;order: 5;}
+    .blue {background-color: #4834d4;order: 6;}
+    .indigo {background-color: #30336b;order: 7;}
+    .purple {background-color: #be2edd;order: 4;}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="red">Red</div>
+    <div class="orange">Orange</div>
+    <div class="yellow">Yellow</div>
+    <div class="green">Green</div>
+    <div class="blue">Blue</div>
+    <div class="indigo">Indigo</div>
+    <div class="purple">Purple</div>
+  </div>
+  
+</body>
+
+</html>

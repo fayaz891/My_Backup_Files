@@ -1,24 +1,46 @@
 <html>
 <head>
 <style>
+    /*
+    There are four ways to create responsive websites
+    1) Media quiery
+    2) CSS Flex
+    3) CSS Grade
+    4) Bootstrap
+    
 
- @media screen and (max-width:1200px){
+    max-width = targeting minimum width
+    min width =  targeting max width
+    */
+
+ @media (max-width:1200px){
                     body {background:red;
 					      font-size:45px;}}
 					
-@media screen and (max-width:1000px){
+@media (max-width:1000px){
                     body {background:pink;
 					      font-size:35px;}}
 					
-@media screen and (max-width:740px){
+@media (max-width:740px){
                     body {background:blue;
 					      font-size:25px;}}					
   
-@media screen and (max-width:480px){
+@media (max-width:480px){
                     body {background:yellow;
 					      font-size:16px;}}
 
+@media (min-width:480px){
+                        body {border: 5px solid green;
+                        font-size:16px;}
+                    }   
+@media (max-width:480px){
+                    body {background:yellow;
+					      font-size:16px;}}                                           
 
+@media (min-width:600px) and (max-width:800px){
+                        body {border-radius: 50%;
+                            border-color: brown;
+                              font-size:16px;}}
 
 
 </style>
