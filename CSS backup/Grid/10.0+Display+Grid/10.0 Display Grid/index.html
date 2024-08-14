@@ -7,24 +7,36 @@
     /* Write your code here */
     /* Each square should be 100px by 100px */
     /* My colours for white: #f0d9b5, black: #b58863 */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;  /* 1fr 2fr means there is 2 grid-box, one is 1 fraction one time and 2 fration 2 times, e.g 1 box 100px, 2nd box will have 200px*/
+      grid-template-rows: 1fr 1fr 1fr;  /* 1 fr 1fr 1fr means 3 equal rows*/
+      /*grid-template: 1fr 1fr / 1fr 2fr          means rows / columns    
+      grid cell = grid box  ==> create multiple rows and column to create grid cells
+      grid cells devided by grid lines
+      */
+      gap: 10px;
+    }
+    .white{background-color: aqua;}
+    .black{ background-color: black;color: aqua;}
   </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="white"></div>
-    <div class="black"></div>
-    <div class="white"></div>
-    <div class="black"></div>
-    <div class="white"></div>
-    <div class="black"></div>
-    <div class="white"></div>
-    <div class="black"></div>
-    <div class="black"></div>
-    <div class="white"></div>
-    <div class="black"></div>
-    <div class="white"></div>
-    <div class="black"></div>
+    <div class="white">white</div>
+    <div class="black">black</div>
+    <div class="white">white</div>
+    <div class="black">black</div>
+    <div class="white">white</div>
+    <div class="black">black</div>
+    <div class="white">white</div>
+    <div class="black">blck</div>
+    <div class="black">black</div>
+    <div class="white">white</div>
+    <div class="black">dgdgd</div>
+    <div class="white">sdgdgd</div>
+    <div class="black">sgs</div>
     <div class="white"></div>
     <div class="black"></div>
     <div class="white"></div>
