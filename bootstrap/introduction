@@ -1,0 +1,25 @@
+Bootstrap is pre-made css components and stylings
+12 column layout system
+html for structure and css for style
+
+bootstrap is use via CDN link uin the head tag <link...> tag
+or before end of body tag in <script....> tag
+
+getbootstrap.com and copy cdn link
+
+in head tag first need bootstrap link and then custom css link
+
+
+12 column layout system code is like this
+
+<div class="container">
+  <div class="row">
+     <div class="col"> Hello 1</div>
+     <div class="col"> Hello 2</div>
+     <div class="col"> Hello 3</div>
+     <div class="col"> Hello 4</div>
+     .
+     .
+     <div class="col"> hello 12</div>
+  </div>
+</div>
