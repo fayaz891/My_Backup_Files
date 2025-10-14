@@ -49,3 +49,55 @@ document.write("<br>");
 </script>
 </body>
 </html>
+
+<!-- using modren javascript
+<html>
+<head>
+    <title>datatype</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        // Use 'const' for variables that won't be reassigned
+        const x = "<br/>fayaz";
+        const y = 23;
+        const z = true;
+        const a = ["html", "css", "js"];
+        const b = { name: "fayaz", last: "rashid" };
+        const c = null;
+
+        // Use 'let' for variables that might be reassigned (though 'd' isn't here)
+        let d;
+
+        // Get the output container element
+        const outputDiv = document.getElementById('output');
+        let htmlContent = ""; // A string to build the output
+
+        // 1. String
+        htmlContent += x + " " + (typeof x) + "<br>";
+
+        // 2. Number
+        htmlContent += y + " " + (typeof y) + "<br>";
+
+        // 3. Boolean
+        htmlContent += z + " " + (typeof z) + "<br>";
+
+        // 4. Array (Note: typeof is still 'object')
+        htmlContent += a.join(', ') + " " + (typeof a) + "<br>";
+
+        // 5. Object
+        htmlContent += b.name + b.last + " " + (typeof b) + "<br>";
+
+        // 6. Null (Note: typeof is still 'object')
+        htmlContent += c + " " + (typeof c) + "<br>";
+
+        // 7. Undefined
+        htmlContent += d + " " + (typeof d) + "<br>";
+
+        // Write all the accumulated content to the DIV once
+        outputDiv.innerHTML = htmlContent;
+
+    </script>
+</body>
+</html> -->
